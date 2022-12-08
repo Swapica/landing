@@ -1,0 +1,45 @@
+$white: #ffffff;
+$white-rgb: hexToRGB($white);
+$black: #000000;
+$black-rgb: hexToRGB($black);
+
+$background-primary-light: #fcf9f2;
+$background-primary-main: #fffcf6;
+
+/* status colors */
+
+$success-light: #f7fff6;
+$success-main: #77b092;
+$success-dark: #278337;
+
+$error-light: #fff6f6;
+$error-main: #da8787;
+$error-dark: #b3261e;
+
+$warning-light: #f16709;
+$warning-main: #ff6d00;
+$warning-dark: #c43c00;
+
+$info-light: #82f7ff;
+$info-main: #40c4ff;
+$info-dark: #0094cc;
+
+/* brand colors */
+
+$primary-light: #c9c9c9;
+$primary-main: #a7a7a7;
+$primary-dark: #666562;
+
+$primary-light-rgb: hexToRGB($primary-light);
+$primary-main-rgb: hexToRGB($primary-main);
+$primary-dark-rgb: hexToRGB($primary-dark);
+
+/* typography colors */
+
+$text-primary-light: #c9c9c9;
+$text-primary-main: #a7a7a7;
+$text-primary-dark: #666562;
+
+$text-primary-invert-light: #ffffff;
+$text-primary-invert-main: #ffffff;
+$text-primary-invert-dark: #ffffff;

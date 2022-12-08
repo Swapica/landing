@@ -17,7 +17,6 @@
       "node",
       "vite/client",
       "@types/lodash-es",
-      "jsona",
       "vitest/globals",
       "body-scroll-lock",
     ],

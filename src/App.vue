@@ -3,13 +3,11 @@ import { AppNavbar } from '@/common'
 
 import { ErrorHandler } from '@/helpers/error-handler'
 import { ref } from 'vue'
-import { useNotifications } from '@/composables'
 import { config } from '@config'
 
 const isAppInitialized = ref(false)
 const init = async () => {
   try {
-    useNotifications()
     document.title = config.APP_NAME
   } catch (error) {
     ErrorHandler.process(error)

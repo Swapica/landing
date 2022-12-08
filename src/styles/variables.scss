@@ -1,0 +1,80 @@
+@import '../../static/branding/app-colors';
+
+:root,
+:before,
+:after {
+  --white: #{$white};
+  --white-rgb: #{$white-rgb};
+  --black: #{$black};
+  --black-rgb: #{$black-rgb};
+
+  --background-primary-light: #{$background-primary-light};
+  --background-primary-main: #{$background-primary-main};
+
+  /* status colors */
+  --success-light: #{$success-light};
+  --success-main: #{$success-main};
+  --success-dark: #{$success-dark};
+
+  --error-light: #{$error-light};
+  --error-main: #{$error-main};
+  --error-dark: #{$error-dark};
+
+  --warning-light: #{$warning-light};
+  --warning-main: #{$warning-main};
+  --warning-dark: #{$warning-dark};
+
+  --info-light: #{$info-light};
+  --info-main: #{$info-main};
+  --info-dark: #{$info-dark};
+
+  /* brand colors */
+  --primary-light: #{$primary-light};
+  --primary-main: #{$primary-main};
+  --primary-dark: #{$primary-dark};
+  --primary-light-rgb: #{$primary-light-rgb};
+  --primary-main-rgb: #{$primary-main-rgb};
+  --primary-dark-rgb: #{$primary-dark-rgb};
+
+  /* typography colors */
+  --text-primary-light: #{$text-primary-light};
+  --text-primary-main: #{$text-primary-main};
+  --text-primary-dark: #{$text-primary-dark};
+
+  --text-primary-invert-light: #{$text-primary-invert-light};
+  --text-primary-invert-main: #{$text-primary-invert-main};
+  --text-primary-invert-dark: #{$text-primary-invert-dark};
+
+  /* App variables */
+  --app-txt: #{$text-primary-main};
+  --app-font-family: 'Coffe Break', 'Arial', sans-serif;
+  --app-padding-right: #{toRem(80)};
+  --app-padding-left: #{toRem(80)};
+
+  @include respond-to(small) {
+    --app-padding-right: #{toRem(32)};
+    --app-padding-left: #{toRem(32)};
+  }
+
+  /* --------------------------------------- */
+
+  /* Field variables */
+
+  /* --------------------------------------- */
+
+  /* label */
+  --field-label: var(--text-primary-light);
+  --field-label-font-size: #{toRem(14)};
+  --field-label-line-height: 1;
+
+  /* text */
+  --field-text: var(--text-primary-dark);
+  --field-text-font-size: #{toRem(16)};
+  --field-text-line-height: 1;
+  --field-placeholder: var(--text-primary-light);
+
+  /* transition duration */
+  --field-transition-duration: 0.2s;
+
+  --field-error: var(--error-main);
+}

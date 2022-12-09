@@ -10,6 +10,10 @@
   "homepage": {
     "first-block-title": "Welcome to Swapica!",
     "first-block-desc": "Your perfect tool for swapping tokens beetween networks",
-    "launch-btn": "Launch App"
+    "launch-btn": "Launch App",
+    "second-block-title": "What for?",
+    "second-block-desc": "During the development of systems that utilize many smart contracts it is common to see them have long staging period before going to production.",
+    "second-block-second-desc": "Right now the only way to obtain test ether is to use faucets. We are building a service for purchasing test tokens for real tokens on EVM-like networks. Basically, we propose a {part1}, hence embracing the applied task.",
+    "second-block-second-desc-part-1": "solution to a crosschain atomic swaps problem"
   }
 }

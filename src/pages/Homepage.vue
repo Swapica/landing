@@ -56,10 +56,16 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
     grid-template-columns: 1fr toRem(150);
     align-items: flex-start;
     gap: 0;
+    padding-bottom: toRem(57);
+  }
+
+  @include respond-to(643px) {
+    padding-bottom: toRem(7);
   }
 
   @include respond-to(xsmall) {
     grid-template-columns: 1fr toRem(50);
+    padding-bottom: toRem(68);
   }
 }
 
@@ -72,14 +78,15 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 }
 
 .homepage__first-block-image-mobile {
-  height: toRem(356);
+  height: toRem(309);
   width: toRem(153);
   position: absolute;
   right: toRem(-32);
-  top: 0;
+  top: toRem(-35);
 
   @include respond-to(xsmall) {
     top: toRem(41);
+    height: toRem(356);
   }
 }
 

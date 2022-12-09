@@ -83,11 +83,11 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
     grid-template-columns: 1fr toRem(150);
     align-items: flex-start;
     gap: 0;
-    padding-bottom: toRem(57);
+    padding-bottom: toRem(80);
   }
 
   @include respond-to(643px) {
-    padding-bottom: toRem(7);
+    padding-bottom: toRem(30);
   }
 
   @include respond-to(xsmall) {
@@ -110,10 +110,11 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   position: absolute;
   right: toRem(-32);
   top: toRem(-35);
+  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) rgba(94, 77, 62, 0.05);
+  border-radius: toRem(16) 0 0 toRem(16);
 
   @include respond-to(xsmall) {
-    top: toRem(41);
-    height: toRem(356);
+    top: toRem(59);
   }
 }
 
@@ -144,10 +145,10 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 .homepage__second-block {
   margin-top: toRem(108);
   display: grid;
-  gap: toRem(40);
-  grid-template-columns: 1fr 1.031fr;
+  gap: toRem(56);
+  grid-template-columns: 1fr 1.091fr;
   align-items: center;
-  padding: 0 toRem(82) 0 toRem(50);
+  padding: 0 toRem(82) 0 toRem(66);
 
   @include respond-to(large) {
     padding: 0;
@@ -161,6 +162,8 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 
 .homepage__second-block-image {
   width: 100%;
+  border-radius: toRem(16);
+  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) rgba(94, 77, 62, 0.05);
 }
 
 .homepage__second-block-title {

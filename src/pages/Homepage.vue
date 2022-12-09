@@ -26,6 +26,33 @@
         />
       </div>
     </section>
+
+    <section class="homepage__second-block">
+      <img
+        v-if="!isMobile"
+        class="homepage__second-block-image"
+        src="/images/second-block.png"
+      />
+      <div class="homepage__second-block-content">
+        <h2 class="homepage__second-block-title">
+          {{ $t('homepage.second-block-title') }}
+        </h2>
+        <p class="homepage__second-block-desc">
+          {{ $t('homepage.second-block-desc') }}
+        </p>
+        <i18n-t
+          class="homepage__second-block-desc homepage__second-block-desc-second"
+          keypath="homepage.second-block-second-desc"
+          tag="p"
+        >
+          <template #part1>
+            <span class="homepage__second-block-desc-bold">
+              {{ $t('homepage.second-block-second-desc-part-1') }}
+            </span>
+          </template>
+        </i18n-t>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -43,10 +70,10 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 <style lang="scss" scoped>
 .homepage__first-block {
   display: grid;
-  gap: toRem(32);
-  grid-template-columns: 1fr 1.211fr;
+  gap: toRem(16);
+  grid-template-columns: 1fr 1.269fr;
   align-items: center;
-  padding: 0 toRem(49) 0 toRem(66);
+  padding: 0 toRem(33) 0 toRem(66);
 
   @include respond-to(large) {
     padding: 0;
@@ -112,5 +139,54 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   @include respond-to(xsmall) {
     width: toRem(188);
   }
+}
+
+.homepage__second-block {
+  margin-top: toRem(108);
+  display: grid;
+  gap: toRem(40);
+  grid-template-columns: 1fr 1.031fr;
+  align-items: center;
+  padding: 0 toRem(82) 0 toRem(50);
+
+  @include respond-to(large) {
+    padding: 0;
+  }
+
+  @include respond-to(tablet) {
+    margin-top: toRem(84);
+    grid-template-columns: 1fr;
+  }
+}
+
+.homepage__second-block-image {
+  width: 100%;
+}
+
+.homepage__second-block-title {
+  margin-bottom: toRem(16);
+
+  @include respond-to(tablet) {
+    margin-bottom: toRem(20);
+  }
+}
+
+.homepage__second-block-desc-second {
+  margin-top: toRem(24);
+
+  @include respond-to(tablet) {
+    margin-top: toRem(20);
+  }
+}
+
+.homepage__second-block-desc {
+  font-size: toRem(22);
+  line-height: 1.2;
+}
+
+.homepage__second-block-desc-bold {
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--text-primary-dark);
 }
 </style>

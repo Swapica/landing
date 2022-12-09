@@ -13,10 +13,11 @@
       <app-button
         v-if="!isMobile"
         scheme="primary"
-        text="Connect"
+        :text="$t('app-navbar.launch-btn')"
         class="app-navbar__action-btn"
-        @click="isMobileNavigationShown = true"
+        :href="$config.DASHBOARD_APP_URL"
       />
+
       <app-button
         v-if="isMobile"
         class="app-navbar__toogle-btn"
@@ -116,5 +117,9 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 
 .app-navbar__toogle-btn {
   --button-icon-size: #{toRem(40)};
+}
+
+.app-navbar__action-btn {
+  width: toRem(198);
 }
 </style>

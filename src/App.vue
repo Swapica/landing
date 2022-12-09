@@ -52,7 +52,7 @@ init()
   margin: 0 auto;
   width: 100%;
 
-  @include respond-to(small) {
+  @include respond-to(tablet) {
     padding: var(--padding-mobile);
   }
 }

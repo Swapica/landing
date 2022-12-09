@@ -1,8 +1,15 @@
 {
   "app-navigation-mobile": {
-    "homepage-link": "Homepage"
+    "homepage-link": "Homepage",
+    "launch-btn":"Launch App"
   },
   "app-navbar": {
-    "homepage-link": "Homepage"
+    "homepage-link": "Homepage",
+    "launch-btn":"Launch App"
+  },
+  "homepage": {
+    "first-block-title": "Welcome to Swapica!",
+    "first-block-desc": "Your perfect tool for swapping tokens beetween networks",
+    "launch-btn": "Launch App"
   }
 }

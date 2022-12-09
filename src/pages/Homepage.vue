@@ -1,95 +1,108 @@
-<script lang="ts" setup>
-import { AppButton } from '@/common'
-
-const handleClick = () => {
-  alert('some string')
-}
-</script>
-
 <template>
-  <div class="ui-kit-page">
-    <section class="ui-kit-page__buttons">
-      <app-button
-        :icon-right="$icons.user"
-        scheme="primary"
-        :text="'router, border-rounded, icon'"
-        :route="{ name: $routes.homepage }"
-      />
-      <app-button
-        modification="border-circle"
-        scheme="secondary"
-        :text="'href, border-circle'"
-        href="https://www.youtube.com/"
-        target="_blank"
-      />
-      <app-button
-        scheme="secondary"
-        :text="'Alert, icon-first'"
-        :icon-left="$icons.user"
-        @click="handleClick"
-        disabled
-      />
-
-      <app-button scheme="primary" disabled :text="'flat, small'" />
-      <app-button :icon-right="$icons.user" />
+  <div class="homepage">
+    <section class="homepage__first-block">
+      <div class="homepage__first-block-content">
+        <h1>{{ $t('homepage.first-block-title') }}</h1>
+        <p class="homepage__first-block-desc">
+          {{ $t('homepage.first-block-desc') }}
+        </p>
+        <app-button
+          class="homepage__launch-btn"
+          :text="$t('homepage.launch-btn')"
+          scheme="primary"
+          :href="$config.DASHBOARD_APP_URL"
+        />
+      </div>
+      <div class="homepage__first-block-image-wrp">
+        <img
+          v-if="isMobile"
+          class="homepage__first-block-image-mobile"
+          src="/images/first-block-mobile.png"
+        />
+        <img
+          v-else
+          class="homepage__first-block-image"
+          src="/images/first-block.png"
+        />
+      </div>
     </section>
   </div>
 </template>
 
+<script lang="ts" setup>
+import { AppButton } from '@/common'
+
+import { computed } from 'vue'
+import { useWindowSize } from '@vueuse/core'
+import { WINDOW_BREAKPOINTS } from '@/enums'
+
+const { width: windowWidth } = useWindowSize()
+const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
+</script>
+
 <style lang="scss" scoped>
-.ui-kit-page {
+.homepage__first-block {
   display: grid;
-  grid-gap: toRem(50);
-  padding-bottom: toRem(200);
-}
-
-.ui-kit-page__buttons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
   gap: toRem(32);
-}
+  grid-template-columns: 1fr 1.211fr;
+  align-items: center;
+  padding: 0 toRem(49) 0 toRem(66);
 
-.ui-kit-page__inputs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: toRem(32);
-}
+  @include respond-to(large) {
+    padding: 0;
+  }
 
-.ui-kit-page__common {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: toRem(56);
-}
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr toRem(150);
+    align-items: flex-start;
+    gap: 0;
+  }
 
-.ui-kit-page__collapse {
-  width: 100%;
-}
-
-.ui-kit-page__collapse-btn {
-  width: 100%;
-}
-
-.ui-kit-page__collapse-body {
-  font-size: toRem(24);
-}
-
-.ui-kit-page__icons {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, toRem(24));
-  grid-gap: toRem(24);
-
-  & > * {
-    width: toRem(24);
-    height: toRem(24);
+  @include respond-to(xsmall) {
+    grid-template-columns: 1fr toRem(50);
   }
 }
 
-.ui-kit-page__input-icon {
-  max-width: toRem(24);
-  max-height: toRem(24);
+.homepage__first-block-image-wrp {
+  position: relative;
+}
+
+.homepage__first-block-image {
+  width: 100%;
+}
+
+.homepage__first-block-image-mobile {
+  height: toRem(309);
+  width: toRem(153);
+  position: absolute;
+  right: toRem(-32);
+  top: 0;
+
+  @include respond-to(xsmall) {
+    top: toRem(46);
+  }
+}
+
+.homepage__first-block-desc {
+  margin: toRem(24) 0 toRem(48);
+  font-size: toRem(32);
+  line-height: 1;
+
+  @include respond-to(tablet) {
+    font-size: toRem(24);
+    line-height: 1.2;
+  }
+
+  @include respond-to(xsmall) {
+    max-width: toRem(188);
+  }
+}
+
+.homepage__launch-btn {
+  width: toRem(199);
+
+  @include respond-to(xsmall) {
+    width: toRem(188);
+  }
 }
 </style>

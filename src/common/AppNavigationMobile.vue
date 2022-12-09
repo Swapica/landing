@@ -23,7 +23,12 @@
               </router-link>
             </div>
             <div class="app-navigation-mobile__actions">
-              <app-button scheme="primary" :text="'Connect'" />
+              <app-button
+                scheme="primary"
+                :text="$t('app-navigation-mobile.launch-btn')"
+                class="app-navigation-mobile__action-btn"
+                :href="$config.DASHBOARD_APP_URL"
+              />
             </div>
           </div>
         </div>
@@ -137,6 +142,10 @@ $z-index-negative: -1;
   flex-direction: column;
   gap: toRem(24);
   flex: 1;
+}
+
+.app-navigation-mobile__action-btn {
+  width: toRem(198);
 }
 
 .app-navigation-mobile__link {

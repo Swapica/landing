@@ -16,10 +16,10 @@
             <div class="app-navigation-mobile__nav">
               <router-link
                 class="app-navigation-mobile__link"
-                :to="{ name: $routes.uiKit }"
+                :to="{ name: $routes.homepage }"
                 @click="closeNav"
               >
-                {{ $t('app-navigation-mobile.dashboard-link') }}
+                {{ $t('app-navigation-mobile.homepage-link') }}
               </router-link>
             </div>
             <div class="app-navigation-mobile__actions">
@@ -93,12 +93,12 @@ $z-index-negative: -1;
   width: 100vw;
   flex-wrap: wrap;
   height: toRem(80);
-  padding: toRem(20) var(--app-padding-right) toRem(20) var(--app-padding-left);
+  padding: toRem(24) var(--app-padding-right) toRem(24) var(--app-padding-left);
 }
 
 .app-navigation-mobile__logo {
-  width: toRem(95);
-  height: toRem(37);
+  width: toRem(120);
+  height: toRem(23);
 }
 
 .app-navigation-mobile__toogle-btn {

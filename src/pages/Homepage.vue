@@ -72,14 +72,14 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 }
 
 .homepage__first-block-image-mobile {
-  height: toRem(309);
+  height: toRem(356);
   width: toRem(153);
   position: absolute;
   right: toRem(-32);
   top: 0;
 
   @include respond-to(xsmall) {
-    top: toRem(46);
+    top: toRem(41);
   }
 }
 
@@ -91,6 +91,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   @include respond-to(tablet) {
     font-size: toRem(24);
     line-height: 1.2;
+    margin: toRem(16) 0 toRem(24);
   }
 
   @include respond-to(xsmall) {

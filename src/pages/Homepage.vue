@@ -107,6 +107,25 @@
         </p>
       </div>
     </section>
+    <section class="homepage__fourth-block">
+      <div class="homepage__fourth-block-content-wrp">
+        <h2 class="homepage__fourth-block-title">
+          {{ $t('homepage.fourth-block-title') }}
+        </h2>
+
+        <div class="homepage__fourth-block-content">
+          <p class="homepage__fourth-block-desc">
+            {{ $t('homepage.fourth-block-desc') }}
+          </p>
+          <app-button
+            class="homepage__launch-btn"
+            :text="$t('homepage.launch-btn')"
+            scheme="primary"
+            :href="$config.DASHBOARD_APP_URL"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -164,7 +183,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   position: absolute;
   right: toRem(-32);
   top: toRem(-35);
-  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) rgba(94, 77, 62, 0.05);
+  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) var(--shadow-primary-main);
   border-radius: toRem(29) 0 0 toRem(29);
 
   @include respond-to(xsmall) {
@@ -190,9 +209,11 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 
 .homepage__launch-btn {
   width: toRem(199);
+  min-width: toRem(199);
 
   @include respond-to(xsmall) {
     width: toRem(188);
+    min-width: toRem(188);
   }
 }
 
@@ -217,7 +238,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 .homepage__second-block-image {
   width: 100%;
   border-radius: 6.5%;
-  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) rgba(94, 77, 62, 0.05);
+  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) var(--shadow-primary-main);
 }
 
 .homepage__second-block-title {
@@ -290,5 +311,61 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   padding: toRem(14) toRem(22) toRem(4) toRem(20);
   background: url('/backgrounds/circle-bg.svg') no-repeat;
   background-size: 100% 100%;
+}
+
+.homepage__fourth-block {
+  margin-top: toRem(126);
+  padding: toRem(16);
+  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) var(--shadow-primary-main);
+  border-radius: toRem(32);
+  background: var(--background-secondary-main);
+
+  @include respond-to(tablet) {
+    margin-top: toRem(100);
+  }
+}
+
+.homepage__fourth-block-content-wrp {
+  border-radius: toRem(16);
+  background: var(--background-primary-main);
+  padding: toRem(58) toRem(60) toRem(58) toRem(59);
+  display: flex;
+  flex-direction: column;
+  gap: toRem(16);
+
+  @include respond-to(tablet) {
+    flex-direction: column;
+    align-items: center;
+    padding: toRem(24) toRem(12) toRem(12) toRem(12);
+  }
+}
+
+.homepage__fourth-block-content {
+  display: flex;
+  gap: toRem(32);
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include respond-to(tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.homepage__fourth-block-desc {
+  max-width: toRem(735);
+  width: 100%;
+  font-size: toRem(20);
+  line-height: 1.2;
+
+  @include respond-to(tablet) {
+    text-align: center;
+  }
+}
+
+.homepage__fourth-block-title {
+  @include respond-to(tablet) {
+    text-align: center;
+  }
 }
 </style>

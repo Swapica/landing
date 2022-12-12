@@ -18,11 +18,13 @@
           v-if="isMobile"
           class="homepage__first-block-image-mobile"
           src="/images/first-block-mobile.png"
+          alt="image"
         />
         <img
           v-else
           class="homepage__first-block-image"
           src="/images/first-block.png"
+          alt="image"
         />
       </div>
     </section>
@@ -32,6 +34,7 @@
         v-if="!isMobile"
         class="homepage__second-block-image"
         src="/images/second-block.png"
+        alt="image"
       />
       <div class="homepage__second-block-content">
         <h2 class="homepage__second-block-title">
@@ -51,6 +54,57 @@
             </span>
           </template>
         </i18n-t>
+      </div>
+    </section>
+
+    <section class="homepage__third-block">
+      <div class="homepage__third-block-info-block">
+        <div class="homepage__third-block-info-block-wrp">
+          <span class="homepage__third-block-info-block-title-number">
+            {{ $t('homepage.third-block-title-number-1') }}
+          </span>
+          <h3>{{ $t('homepage.third-block-title-1') }}</h3>
+        </div>
+        <img
+          class="homepage__third-block-info-block-img"
+          src="/images/third-block-1.png"
+          alt="image"
+        />
+        <p class="homepage__third-block-info-block-desc">
+          {{ $t('homepage.third-block-desc-1') }}
+        </p>
+      </div>
+      <div class="homepage__third-block-info-block">
+        <div class="homepage__third-block-info-block-wrp">
+          <span class="homepage__third-block-info-block-title-number">
+            {{ $t('homepage.third-block-title-number-2') }}
+          </span>
+          <h3>{{ $t('homepage.third-block-title-2') }}</h3>
+        </div>
+        <img
+          class="homepage__third-block-info-block-img"
+          src="/images/third-block-2.png"
+          alt="image"
+        />
+        <p class="homepage__third-block-info-block-desc">
+          {{ $t('homepage.third-block-desc-1') }}
+        </p>
+      </div>
+      <div class="homepage__third-block-info-block">
+        <div class="homepage__third-block-info-block-wrp">
+          <span class="homepage__third-block-info-block-title-number">
+            {{ $t('homepage.third-block-title-number-3') }}
+          </span>
+          <h3>{{ $t('homepage.third-block-title-3') }}</h3>
+        </div>
+        <img
+          class="homepage__third-block-info-block-img"
+          src="/images/third-block-3.png"
+          alt="image"
+        />
+        <p class="homepage__third-block-info-block-desc">
+          {{ $t('homepage.third-block-desc-1') }}
+        </p>
       </div>
     </section>
   </div>
@@ -111,7 +165,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   right: toRem(-32);
   top: toRem(-35);
   box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) rgba(94, 77, 62, 0.05);
-  border-radius: toRem(16) 0 0 toRem(16);
+  border-radius: toRem(29) 0 0 toRem(29);
 
   @include respond-to(xsmall) {
     top: toRem(59);
@@ -162,7 +216,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 
 .homepage__second-block-image {
   width: 100%;
-  border-radius: toRem(16);
+  border-radius: 6.5%;
   box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) rgba(94, 77, 62, 0.05);
 }
 
@@ -191,5 +245,50 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   font-size: inherit;
   line-height: inherit;
   color: var(--text-primary-dark);
+}
+
+.homepage__third-block {
+  margin-top: toRem(126);
+  display: grid;
+  gap: toRem(32);
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include respond-to(tablet) {
+    margin-top: toRem(100);
+    grid-template-columns: 1fr;
+  }
+}
+
+.homepage__third-block-info-block-img {
+  max-width: toRem(302);
+  width: 100%;
+}
+
+.homepage__third-block-info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: toRem(24);
+}
+
+.homepage__third-block-info-block-wrp {
+  display: flex;
+  gap: toRem(16);
+  align-items: center;
+}
+
+.homepage__third-block-info-block-desc {
+  font-size: toRem(20);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.homepage__third-block-info-block-title-number {
+  font-size: toRem(36);
+  line-height: 1;
+  color: var(--text-primary-dark);
+  padding: toRem(14) toRem(22) toRem(4) toRem(20);
+  background: url('/backgrounds/circle-bg.svg') no-repeat;
+  background-size: 100% 100%;
 }
 </style>

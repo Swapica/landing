@@ -126,11 +126,43 @@
         </div>
       </div>
     </section>
+    <section class="homepage__faq-block">
+      <div class="homepage__faq-block-content">
+        <h2 class="homepage__faq-block-content-title">
+          {{ $t('homepage.faq-block-title') }}
+        </h2>
+        <div class="homepage__faq-block-faqs">
+          <collapse
+            :title="$t('homepage.faq-title-1')"
+            :description="$t('homepage.faq-desc-1')"
+          />
+          <collapse
+            :title="$t('homepage.faq-title-2')"
+            :description="$t('homepage.faq-desc-2')"
+          />
+          <collapse
+            :title="$t('homepage.faq-title-3')"
+            :description="$t('homepage.faq-desc-3')"
+          />
+          <collapse
+            :title="$t('homepage.faq-title-4')"
+            :description="$t('homepage.faq-desc-4')"
+          />
+        </div>
+      </div>
+
+      <img
+        v-if="!isMobile"
+        class="homepage__faq-block-image"
+        src="/images/faq-block.png"
+        alt="image"
+      />
+    </section>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { AppButton } from '@/common'
+import { AppButton, Collapse } from '@/common'
 
 import { computed } from 'vue'
 import { useWindowSize } from '@vueuse/core'
@@ -369,5 +401,53 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   @include respond-to(tablet) {
     text-align: center;
   }
+}
+
+.homepage__faq-block {
+  display: grid;
+  gap: toRem(100);
+  grid-template-columns: 1.034fr 1fr;
+  padding: 0 toRem(82) 0 toRem(98);
+  margin-top: toRem(108);
+
+  @include respond-to(large) {
+    padding: 0;
+  }
+
+  @include respond-to(xmedium) {
+    gap: toRem(50);
+  }
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+    margin-top: toRem(84);
+  }
+}
+
+.homepage__faq-block-image {
+  width: 100%;
+  box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) var(--shadow-primary-main);
+  border-radius: 7.5%;
+}
+
+.homepage__faq-block-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: toRem(31);
+  gap: toRem(28);
+
+  @include respond-to(xmedium) {
+    margin-top: 0;
+  }
+}
+
+.homepage__faq-block-content-title {
+  font-size: toRem(40);
+}
+
+.homepage__faq-block-faqs {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(8);
 }
 </style>

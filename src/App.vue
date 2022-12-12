@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { AppNavbar } from '@/common'
+import { AppNavbar, AppFooter } from '@/common'
 
 import { ErrorHandler } from '@/helpers/error-handler'
 import { ref } from 'vue'
@@ -26,6 +26,7 @@ init()
         <component class="app__main" :is="Component" />
       </transition>
     </router-view>
+    <app-footer />
   </div>
 </template>
 

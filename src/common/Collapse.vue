@@ -163,6 +163,10 @@ export default defineComponent({
   padding: toRem(12) toRem(14) toRem(14) toRem(20);
 }
 
+.collapse__head-title {
+  text-align: left;
+}
+
 .collapse__body-transition-enter-active {
   animation: collapse-frame-keyframes 0.25s ease-in-out;
 }

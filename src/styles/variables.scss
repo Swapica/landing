@@ -11,6 +11,10 @@
   --background-primary-light: #{$background-primary-light};
   --background-primary-main: #{$background-primary-main};
 
+  --background-secondary-main: #{$background-secondary-main};
+
+  --shadow-primary-main: #{$shadow-primary-main};
+
   /* status colors */
   --success-light: #{$success-light};
   --success-main: #{$success-main};
@@ -51,7 +55,7 @@
   --app-padding-right: #{toRem(80)};
   --app-padding-left: #{toRem(80)};
 
-  @include respond-to(small) {
+  @include respond-to(tablet) {
     --app-padding-right: #{toRem(32)};
     --app-padding-left: #{toRem(32)};
   }

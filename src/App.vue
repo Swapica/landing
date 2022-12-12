@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { AppNavbar } from '@/common'
+import { AppNavbar, AppFooter } from '@/common'
 
 import { ErrorHandler } from '@/helpers/error-handler'
 import { ref } from 'vue'
@@ -26,6 +26,7 @@ init()
         <component class="app__main" :is="Component" />
       </transition>
     </router-view>
+    <app-footer />
   </div>
 </template>
 
@@ -33,7 +34,7 @@ init()
 .app__container {
   overflow: hidden;
   display: grid;
-  grid-template-rows: toRem(85) 1fr max-content;
+  grid-template-rows: toRem(96) 1fr max-content;
   flex: 1;
 
   @include respond-to(small) {
@@ -42,9 +43,19 @@ init()
 }
 
 .app__main {
-  padding: toRem(24) var(--app-padding-right) toRem(24) var(--app-padding-left);
-  max-width: toRem(887);
+  --padding: #{toRem(48)} var(--app-padding-right) #{toRem(154)}
+    var(--app-padding-left);
+  --padding-mobile: #{toRem(24)} var(--app-padding-right) #{toRem(100)}
+    var(--app-padding-left);
+
+  padding: var(--padding);
+  max-width: toRem(1512);
   margin: 0 auto;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    padding: var(--padding-mobile);
+  }
 }
 
 .fade-enter-active {

@@ -35,5 +35,8 @@
     "faq-desc-3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
     "faq-title-4": "Who would you swap lives with for a day?",
     "faq-desc-4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+  },
+  "app-footer": {
+    "created-txt": "Created by Distributed Lab"
   }
 }

@@ -12,9 +12,18 @@ import { WINDOW_BREAKPOINTS } from '@/enums'
 import Logo from '/branding/logo.svg'
 import LogoMobile from '/branding/logo-mobile.svg'
 
+const props = withDefaults(
+  defineProps<{
+    withText?: boolean
+  }>(),
+  {
+    withText: false,
+  },
+)
+
 const { width: windowWidth } = useWindowSize()
 const logo = computed(() => {
-  return isMobile.value ? LogoMobile : Logo
+  return isMobile.value || props.withText ? LogoMobile : Logo
 })
 
 const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)

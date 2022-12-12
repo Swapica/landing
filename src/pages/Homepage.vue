@@ -283,6 +283,8 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
 .homepage__third-block-info-block-img {
   max-width: toRem(302);
   width: 100%;
+  box-shadow: toRem(2) toRem(4) toRem(12) rgba(94, 77, 62, 0.07);
+  border-radius: toRem(12);
 }
 
 .homepage__third-block-info-block {

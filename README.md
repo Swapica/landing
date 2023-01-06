@@ -37,7 +37,7 @@ yarn rsc %release-version%
 
 ### env.js variables
 ```
- VITE_APP_APP_NAME='Swapica'
+ VITE_APP_APP_NAME: 'Swapica'
  VITE_APP_DASHBOARD_APP_URL: '',
  VITE_APP_GITHUB_URL: '',
 ```

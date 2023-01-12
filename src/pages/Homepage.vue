@@ -87,7 +87,7 @@
           alt="image"
         />
         <p class="homepage__third-block-info-block-desc">
-          {{ $t('homepage.third-block-desc-1') }}
+          {{ $t('homepage.third-block-desc-2') }}
         </p>
       </div>
       <div class="homepage__third-block-info-block">
@@ -103,7 +103,7 @@
           alt="image"
         />
         <p class="homepage__third-block-info-block-desc">
-          {{ $t('homepage.third-block-desc-1') }}
+          {{ $t('homepage.third-block-desc-3') }}
         </p>
       </div>
     </section>

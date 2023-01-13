@@ -1,5 +1,11 @@
 <template>
-  <div class="app-navbar" :class="{ 'app-navbar--mobile': isMobile }">
+  <div
+    class="app-navbar"
+    :class="{
+      'app-navbar--mobile': isMobile,
+      'app-navbar--hidden': isNavbarHidden,
+    }"
+  >
     <div class="app-navbar__content">
       <app-logo class="app-navbar__logo" />
 
@@ -34,25 +40,65 @@
 
 <script lang="ts" setup>
 import { AppLogo, AppButton, AppNavigationMobile } from '@/common'
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 import { WINDOW_BREAKPOINTS } from '@/enums'
 
+const MOBILE_NAVBAR_HEIGHT = 88
+const NAVBAR_HEIGHT = 96
+
 const { width: windowWidth } = useWindowSize()
 const isMobileNavigationShown = ref(false)
+const lastScrollPosition = ref(0)
+const isNavbarHidden = ref(false)
 
 const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
+const navbarHeight = computed(() =>
+  isMobile.value ? MOBILE_NAVBAR_HEIGHT : NAVBAR_HEIGHT,
+)
+
+onMounted(() => {
+  window.addEventListener('scroll', toggleShowNavbar)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', toggleShowNavbar)
+})
+
+const toggleShowNavbar = () => {
+  const currentScrollPosition = window.pageYOffset
+  if (
+    currentScrollPosition > lastScrollPosition.value &&
+    currentScrollPosition > navbarHeight.value
+  ) {
+    isNavbarHidden.value = true
+  } else if (currentScrollPosition < lastScrollPosition.value) {
+    isNavbarHidden.value = false
+  }
+  lastScrollPosition.value = currentScrollPosition
+}
 </script>
 
 <style lang="scss" scoped>
+$z-local-index: 9;
+
 .app-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: toRem(24) var(--app-padding-right) toRem(24) var(--app-padding-left);
-  position: relative;
-  transition: background-color 0.3s;
+  position: fixed;
+  top: 0;
+  background-color: var(--background-primary-main);
+  box-shadow: 0 toRem(2) toRem(12) var(--shadow-primary-dark);
+  height: toRem(96);
+  z-index: $z-local-index;
   width: 100vw;
+  transition: transform 0.3s;
+  transform: none;
+
+  &--hidden {
+    transform: translateY(-100%);
+  }
 
   @include respond-to(tablet) {
     flex-wrap: wrap;

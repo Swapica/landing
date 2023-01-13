@@ -87,7 +87,7 @@
           alt="image"
         />
         <p class="homepage__third-block-info-block-desc">
-          {{ $t('homepage.third-block-desc-1') }}
+          {{ $t('homepage.third-block-desc-2') }}
         </p>
       </div>
       <div class="homepage__third-block-info-block">
@@ -103,7 +103,7 @@
           alt="image"
         />
         <p class="homepage__third-block-info-block-desc">
-          {{ $t('homepage.third-block-desc-1') }}
+          {{ $t('homepage.third-block-desc-3') }}
         </p>
       </div>
     </section>
@@ -214,7 +214,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   width: toRem(153);
   position: absolute;
   right: toRem(-32);
-  top: toRem(-35);
+  top: 0;
   box-shadow: toRem(-2) toRem(4) toRem(16) toRem(9) var(--shadow-primary-main);
   border-radius: toRem(29) 0 0 toRem(29);
 

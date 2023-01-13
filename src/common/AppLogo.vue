@@ -1,7 +1,7 @@
 <template>
   <div class="app-logo">
     <img class="app-logo__img" :src="logo" :alt="$config.APP_NAME" />
-    <router-link class="app-logo__link" :to="{ name: $routes.homepage }" />
+    <button class="app-logo__button" @click="scrollTop" />
   </div>
 </template>
 
@@ -27,6 +27,10 @@ const logo = computed(() => {
 })
 
 const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
+
+const scrollTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 </script>
 <style lang="scss" scoped>
 .app-logo {
@@ -35,7 +39,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   position: relative;
 }
 
-.app-logo__link {
+.app-logo__button {
   position: absolute;
   top: 0;
   right: 0;

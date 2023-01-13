@@ -1,6 +1,6 @@
 {
   "name": "swapica-landing",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0-rc.1",
   "gitHooks": {
     "pre-commit": "yarn lint",
     "pre-push": "yarn test && yarn rsc"
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.1.1",
-    "body-scroll-lock": "^4.0.0-beta.0",
+    "body-scroll-lock": "v3.1.5",
     "lodash-es": "^4.17.21",
     "loglevel": "^1.8.0",
     "postcss": "^8.4.16",

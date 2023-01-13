@@ -34,18 +34,18 @@ init()
 .app__container {
   overflow: hidden;
   display: grid;
-  grid-template-rows: toRem(96) 1fr max-content;
+  grid-template-rows: 1fr max-content;
   flex: 1;
 
   @include respond-to(small) {
-    grid-template-rows: max-content 1fr max-content;
+    grid-template-rows: 1fr max-content;
   }
 }
 
 .app__main {
-  --padding: #{toRem(48)} var(--app-padding-right) #{toRem(154)}
+  --padding: #{toRem(144)} var(--app-padding-right) #{toRem(154)}
     var(--app-padding-left);
-  --padding-mobile: #{toRem(24)} var(--app-padding-right) #{toRem(100)}
+  --padding-mobile: #{toRem(112)} var(--app-padding-right) #{toRem(100)}
     var(--app-padding-left);
 
   padding: var(--padding);

@@ -43,17 +43,11 @@
         <p class="homepage__second-block-desc">
           {{ $t('homepage.second-block-desc') }}
         </p>
-        <i18n-t
+        <p
           class="homepage__second-block-desc homepage__second-block-desc-second"
-          keypath="homepage.second-block-second-desc"
-          tag="p"
         >
-          <template #part1>
-            <span class="homepage__second-block-desc-bold">
-              {{ $t('homepage.second-block-second-desc-part-1') }}
-            </span>
-          </template>
-        </i18n-t>
+          {{ $t('homepage.second-block-second-desc') }}
+        </p>
       </div>
     </section>
 
@@ -119,9 +113,9 @@
           </p>
           <app-button
             class="homepage__launch-btn"
-            :text="$t('homepage.launch-btn')"
+            :text="$t('homepage.faucet-btn')"
             scheme="primary"
-            :href="$config.DASHBOARD_APP_URL"
+            :href="$config.FAUCET_APP_URL"
           />
         </div>
       </div>

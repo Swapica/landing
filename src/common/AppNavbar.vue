@@ -13,6 +13,9 @@
         <router-link class="app-navbar__link" :to="{ name: $routes.homepage }">
           {{ $t('app-navbar.homepage-link') }}
         </router-link>
+        <router-link class="app-navbar__link" :to="{ name: $routes.terms }">
+          {{ $t('app-navbar.terms-link') }}
+        </router-link>
       </div>
     </div>
     <div>

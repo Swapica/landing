@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     name: ROUTE_NAMES.homepage,
     component: () => import('@/pages/Homepage.vue'),
   },
+  {
+    path: '/terms',
+    name: ROUTE_NAMES.terms,
+    component: () => import('@/pages/Terms.vue'),
+  },
 ]
 
 const router = createRouter({

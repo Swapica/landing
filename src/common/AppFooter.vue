@@ -1,7 +1,11 @@
 <template>
   <div class="app-footer">
     <span class="app-footer__created-text">
-      {{ $t('app-footer.created-txt') }}
+      {{
+        $t('app-footer.created-txt', {
+          year: currentYear,
+        })
+      }}
     </span>
     <app-logo v-if="!isMobile" class="app-footer__logo" with-text />
     <app-button
@@ -21,6 +25,7 @@ import { WINDOW_BREAKPOINTS } from '@/enums'
 const { width: windowWidth } = useWindowSize()
 
 const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
+const currentYear = computed(() => new Date().getFullYear())
 </script>
 
 <style lang="scss" scoped>
@@ -34,7 +39,7 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   align-items: center;
 
   @include respond-to(tablet) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(toRem(211), 1fr) 1fr;
     padding: toRem(32) var(--app-padding-right) toRem(32)
       var(--app-padding-left);
   }
@@ -58,7 +63,6 @@ const isMobile = computed(() => windowWidth.value < WINDOW_BREAKPOINTS.tablet)
   color: var(--text-primary-dark);
 
   @include respond-to(tablet) {
-    max-width: toRem(105);
     line-height: 1.2;
   }
 }

@@ -12,13 +12,16 @@
     </p>
 
     <div class="terms__anchors">
-      <router-link :to="{ hash: '#block1' }" class="terms__anchor">
+      <router-link :to="{ hash: '#introduction' }" class="terms__anchor">
         {{ $t('terms.block-1-title') }}
       </router-link>
-      <router-link :to="{ hash: '#block2' }" class="terms__anchor">
+      <router-link :to="{ hash: '#swapica-service' }" class="terms__anchor">
         {{ $t('terms.block-2-title') }}
       </router-link>
-      <router-link :to="{ hash: '#block3' }" class="terms__anchor">
+      <router-link
+        :to="{ hash: '#your-use-of-swapica-service' }"
+        class="terms__anchor"
+      >
         {{ $t('terms.block-3-title') }}
       </router-link>
       <router-link :to="{ hash: '#block4' }" class="terms__anchor">
@@ -35,7 +38,7 @@
       </router-link>
     </div>
 
-    <div class="terms__block" id="block1">
+    <div class="terms__block" id="introduction">
       <h3>{{ $t('terms.block-1-title') }}</h3>
       <p class="terms__paragraph" v-html="$t('terms.block-1-desc-part-1')" />
       <p class="terms__paragraph" v-html="$t('terms.block-1-desc-part-2')" />
@@ -61,7 +64,7 @@
       </p>
     </div>
 
-    <div class="terms__block" id="block2">
+    <div class="terms__block" id="swapica-service">
       <h3>{{ $t('terms.block-2-title') }}</h3>
 
       <h4 class="terms__subblock-title">
@@ -112,7 +115,7 @@
       </p>
     </div>
 
-    <div class="terms__block" id="block3">
+    <div class="terms__block" id="your-use-of-swapica-service">
       <h3>{{ $t('terms.block-3-title') }}</h3>
 
       <h4 class="terms__subblock-title">

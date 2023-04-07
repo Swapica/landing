@@ -24,6 +24,7 @@
               <router-link
                 class="app-navigation-mobile__link"
                 :to="{ name: $routes.terms }"
+                @click="closeNav"
               >
                 {{ $t('app-navigation-mobile.terms-link') }}
               </router-link>

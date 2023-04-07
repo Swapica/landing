@@ -12,27 +12,27 @@
     </p>
 
     <div class="terms__anchors">
-      <a href="#block1" class="terms__anchor">
+      <router-link :to="{ hash: '#block1' }" class="terms__anchor">
         {{ $t('terms.block-1-title') }}
-      </a>
-      <a href="#block2" class="terms__anchor">
+      </router-link>
+      <router-link :to="{ hash: '#block2' }" class="terms__anchor">
         {{ $t('terms.block-2-title') }}
-      </a>
-      <a href="#block3" class="terms__anchor">
+      </router-link>
+      <router-link :to="{ hash: '#block3' }" class="terms__anchor">
         {{ $t('terms.block-3-title') }}
-      </a>
-      <a href="#block4" class="terms__anchor">
+      </router-link>
+      <router-link :to="{ hash: '#block4' }" class="terms__anchor">
         {{ $t('terms.block-4-title') }}
-      </a>
-      <a href="#block5" class="terms__anchor">
+      </router-link>
+      <router-link :to="{ hash: '#block5' }" class="terms__anchor">
         {{ $t('terms.block-5-title') }}
-      </a>
-      <a href="#block6" class="terms__anchor">
+      </router-link>
+      <router-link :to="{ hash: '#block6' }" class="terms__anchor">
         {{ $t('terms.block-6-title') }}
-      </a>
-      <a href="#block7" class="terms__anchor">
+      </router-link>
+      <router-link :to="{ hash: '#block7' }" class="terms__anchor">
         {{ $t('terms.block-7-title') }}
-      </a>
+      </router-link>
     </div>
 
     <div class="terms__block" id="block1">

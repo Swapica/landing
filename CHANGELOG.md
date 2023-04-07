@@ -11,7 +11,6 @@ for further information about branching and tagging conventions.
 #### Changed
 - Text updates
 
-
 ## [1.0.0-rc.6] - 2023-04-07
 #### Changed
 - Meta tags

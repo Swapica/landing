@@ -37,6 +37,6 @@
     "faq-desc-4": "You can use relayers to delegate some parts of the flow to them. Relayers are here to ease your application experience."
   },
   "app-footer": {
-    "created-txt": "Copyright © {year} Global Web3 Sandbox Ltd. All rights reserved"
+    "created-txt": "Copyright © {year}. Developed by Distributed Lab, operated by Global Web3 Sandbox Ltd. All rights reserved."
   }
 }

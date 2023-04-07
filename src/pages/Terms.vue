@@ -12,12 +12,18 @@
     </p>
 
     <div class="terms__anchors">
-      <a class="terms__anchor">
+      <a href="#block1" class="terms__anchor">
         {{ $t('terms.block-1-title') }}
+      </a>
+      <a href="#block2" class="terms__anchor">
+        {{ $t('terms.block-2-title') }}
+      </a>
+      <a href="#block3" class="terms__anchor">
+        {{ $t('terms.block-3-title') }}
       </a>
     </div>
 
-    <div class="terms__block">
+    <div class="terms__block" id="block1">
       <h3>{{ $t('terms.block-1-title') }}</h3>
       <p class="terms__paragraph" v-html="$t('terms.block-1-desc-part-1')" />
       <p class="terms__paragraph" v-html="$t('terms.block-1-desc-part-2')" />
@@ -43,7 +49,7 @@
       </p>
     </div>
 
-    <div class="terms__block">
+    <div class="terms__block" id="block2">
       <h3>{{ $t('terms.block-2-title') }}</h3>
 
       <h4 class="terms__subblock-title">
@@ -59,6 +65,103 @@
       </h4>
       <p class="terms__paragraph">
         {{ $t('terms.block-2-subblock-2-desc') }}
+      </p>
+
+      <h4 class="terms__subblock-title">
+        {{ $t('terms.block-2-subblock-3-title') }}
+      </h4>
+      <p
+        class="terms__paragraph"
+        v-html="$t('terms.block-2-subblock-3-desc')"
+      />
+
+      <h4 class="terms__subblock-title">
+        {{ $t('terms.block-2-subblock-4-title') }}
+      </h4>
+      <p class="terms__paragraph">
+        {{ $t('terms.block-2-subblock-4-desc-1') }}
+      </p>
+      <ul class="terms__list-ul">
+        <li class="terms__paragraph">
+          {{ $t('terms.block-2-subblock-4-list-desc-1') }}
+        </li>
+        <li class="terms__paragraph">
+          {{ $t('terms.block-2-subblock-4-list-desc-2') }}
+        </li>
+        <li class="terms__paragraph">
+          {{ $t('terms.block-2-subblock-4-list-desc-3') }}
+        </li>
+      </ul>
+      <p class="terms__paragraph">
+        {{ $t('terms.block-2-subblock-4-desc-2') }}
+      </p>
+      <p class="terms__paragraph">
+        {{ $t('terms.block-2-subblock-4-desc-3') }}
+      </p>
+    </div>
+
+    <div class="terms__block" id="block3">
+      <h3>{{ $t('terms.block-3-title') }}</h3>
+
+      <h4 class="terms__subblock-title">
+        {{ $t('terms.block-3-subblock-1-title') }}
+      </h4>
+
+      <p
+        class="terms__paragraph"
+        v-html="$t('terms.block-3-subblock-1-desc-1')"
+      />
+      <p class="terms__paragraph">
+        {{ $t('terms.block-3-subblock-1-desc-2') }}
+      </p>
+
+      <h4 class="terms__subblock-title">
+        {{ $t('terms.block-3-subblock-2-title') }}
+      </h4>
+
+      <h5 class="terms__subsubblock-title">
+        {{ $t('terms.block-3-subblock-2-subsubblock-1-title') }}
+      </h5>
+      <p class="terms__paragraph">
+        {{ $t('terms.block-3-subblock-2-subsubblock-1-desc-1') }}
+      </p>
+      <p class="terms__paragraph">
+        {{ $t('terms.block-3-subblock-2-subsubblock-1-desc-2') }}
+      </p>
+
+      <h5 class="terms__subsubblock-title">
+        {{ $t('terms.block-3-subblock-2-subsubblock-2-title') }}
+      </h5>
+      <p
+        class="terms__paragraph"
+        v-html="$t('terms.block-3-subblock-2-subsubblock-2-desc-1')"
+      />
+      <p
+        class="terms__paragraph"
+        v-html="$t('terms.block-3-subblock-2-subsubblock-2-desc-2')"
+      />
+
+      <h4 class="terms__subblock-title">
+        {{ $t('terms.block-3-subblock-3-title') }}
+      </h4>
+
+      <h5 class="terms__subsubblock-title">
+        {{ $t('terms.block-3-subblock-3-subsubblock-1-title') }}
+      </h5>
+      <p class="terms__paragraph">
+        {{ $t('terms.block-3-subblock-3-subsubblock-1-desc-1') }}
+      </p>
+      <ul class="terms__list-ul">
+        <li class="terms__paragraph">
+          {{ $t('terms.block-3-subblock-3-subsubblock-1-list-desc-1') }}
+        </li>
+        <li
+          class="terms__paragraph"
+          v-html="$t('terms.block-3-subblock-3-subsubblock-1-list-desc-2')"
+        />
+      </ul>
+      <p class="terms__paragraph">
+        {{ $t('terms.block-3-subblock-3-subsubblock-1-desc-2') }}
       </p>
     </div>
   </div>
@@ -127,5 +230,23 @@
 
 .terms__block {
   margin-bottom: toRem(40);
+}
+
+.terms__list-ul {
+  margin-top: toRem(16);
+  padding-left: toRem(30);
+
+  li {
+    list-style-type: disc;
+    margin-top: toRem(8);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.terms__subsubblock-title {
+  margin-top: toRem(16);
 }
 </style>

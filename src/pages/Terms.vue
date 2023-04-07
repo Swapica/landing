@@ -21,6 +21,18 @@
       <a href="#block3" class="terms__anchor">
         {{ $t('terms.block-3-title') }}
       </a>
+      <a href="#block4" class="terms__anchor">
+        {{ $t('terms.block-4-title') }}
+      </a>
+      <a href="#block5" class="terms__anchor">
+        {{ $t('terms.block-5-title') }}
+      </a>
+      <a href="#block6" class="terms__anchor">
+        {{ $t('terms.block-6-title') }}
+      </a>
+      <a href="#block7" class="terms__anchor">
+        {{ $t('terms.block-7-title') }}
+      </a>
     </div>
 
     <div class="terms__block" id="block1">
@@ -243,6 +255,10 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  @include respond-to(tablet) {
+    padding-left: toRem(12);
   }
 }
 

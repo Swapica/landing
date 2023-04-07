@@ -1,11 +1,13 @@
 {
   "app-navigation-mobile": {
     "homepage-link": "Homepage",
-    "launch-btn":"Launch App"
+    "launch-btn": "Launch App",
+    "terms-link": "Terms & Conditions"
   },
   "app-navbar": {
     "homepage-link": "Homepage",
-    "launch-btn":"Launch App"
+    "launch-btn": "Launch App",
+    "terms-link": "Terms & Conditions"
   },
   "homepage": {
     "first-block-title": "Welcome to Swapica!",
@@ -38,5 +40,25 @@
   },
   "app-footer": {
     "created-txt": "Copyright © {year} Global Web3 Sandbox Ltd. All rights reserved"
+  },
+  "terms": {
+    "title": "Swapica Terms of Use",
+    "desc": "By continuing to use Swapica, you accept the updated Terms of Use below. Premium Subscribers who do not wish to accept the updated Terms must close their Swapica account prior to their next billing cycle or April 23, 2023, whichever comes first.",
+    "effective-desc": "Effective as of: March 24, 2023",
+    "block-1-title": "1. Introduction",
+    "block-2-title": "2. Swapica Service",
+    "block-3-title": "3. Your Use of Swapica Service",
+    "block-4-title": "4. Content and Intellectual Property Rights",
+    "block-5-title": "5. Customer Support, Information, Questions, and Complaints",
+    "block-6-title": "6. Problems and Disputes",
+    "block-7-title": "7. About These Terms",
+    "block-1-desc-part-1": "Please read these Terms of Use (\"<b>Terms</b>\") carefully as they govern your use of (which includes access to) Swapica’s personalized services for streaming music and other content, including all of our websites and software applications that incorporate or link to these Terms (collectively, the \"<b>Swapica Service</b>\") and any music, videos, podcasts, audiobooks, or other material that is made available through the Swapica Service (\"<b>Content</b>\").",
+    "block-1-desc-part-2": "Use of the Swapica Service is subject to the Swapica Privacy Policy and additional terms and conditions presented by Swapica, all of which are made part of these Terms by this reference.",
+    "block-1-desc-part-3": "By signing up for, or otherwise using, the Swapica Service, you agree to these Terms. If you do not agree to these Terms, then you must not use the Swapica Service or access any Content.",
+    "block-1-desc-part-4": "THESE TERMS CONTAIN A MANDATORY ARBITRATION PROVISION THAT, AS FURTHER SET FORTH IN SECTION 6 BELOW, REQUIRES THE USE OF ARBITRATION ON AN INDIVIDUAL BASIS TO RESOLVE DISPUTES, RATHER THAN JURY TRIALS OR ANY OTHER COURT PROCEEDINGS, OR CLASS ACTIONS OF ANY KIND. IN ARBITRATION THERE IS LESS DISCOVERY AND APPELLATE REVIEW THAN IN COURT.",
+    "block-1-subblock-1-title": "",
+    "block-1-subblock-1-desc": "",
+    "block-1-subblock-2-title": "",
+    "block-1-subblock-2-desc": ""
   }
 }

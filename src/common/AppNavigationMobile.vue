@@ -21,6 +21,12 @@
               >
                 {{ $t('app-navigation-mobile.homepage-link') }}
               </router-link>
+              <router-link
+                class="app-navigation-mobile__link"
+                :to="{ name: $routes.terms }"
+              >
+                {{ $t('app-navigation-mobile.terms-link') }}
+              </router-link>
             </div>
             <div class="app-navigation-mobile__actions">
               <app-button
@@ -154,6 +160,7 @@ $z-index-negative: -1;
   color: var(--text-primary-dark);
   opacity: 0.5;
   transition: color 0.3s;
+  text-align: center;
 
   &:hover {
     opacity: 1;

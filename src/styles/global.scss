@@ -126,6 +126,10 @@ h3 {
 
 h4 {
   font-size: toRem(28);
+
+  @include respond-to(tablet) {
+    font-size: toRem(20);
+  }
 }
 
 h5 {

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Please check our [developers guide](https://gitlab.com/tokend/developers-guide)
 for further information about branching and tagging conventions.
 
+## [1.0.0-rc.7] - 2023-04-07
+#### Changed
+- Text updates
+
+
 ## [1.0.0-rc.6] - 2023-04-07
 #### Changed
 - Meta tags
@@ -42,7 +47,8 @@ for further information about branching and tagging conventions.
 #### Under the hood changes
 - Initiated and setup project
 
-[Unreleased]: https://github.com/Swapica/landing/compare/v1.0.0-rc.6...main
+[Unreleased]: https://github.com/Swapica/landing/compare/v1.0.0-rc.7...main
+[1.0.0-rc.7]: https://github.com/Swapica/landing/compare/v1.0.0-rc.6...v1.0.0-rc.7
 [1.0.0-rc.6]: https://github.com/Swapica/landing/compare/v1.0.0-rc.5...v1.0.0-rc.6
 [1.0.0-rc.5]: https://github.com/Swapica/landing/compare/v1.0.0-rc.4...v1.0.0-rc.5
 [1.0.0-rc.4]: https://github.com/Swapica/landing/compare/v1.0.0-rc.3...v1.0.0-rc.4

@@ -11,173 +11,40 @@
       {{ $t('terms.effective-desc') }}
     </p>
 
-    <div class="terms__anchors">
-      <router-link :to="{ hash: '#introduction' }" class="terms__anchor">
-        {{ $t('terms.block-1-title') }}
-      </router-link>
-      <router-link :to="{ hash: '#swapica-service' }" class="terms__anchor">
-        {{ $t('terms.block-2-title') }}
-      </router-link>
-      <router-link
-        :to="{ hash: '#your-use-of-swapica-service' }"
-        class="terms__anchor"
-      >
-        {{ $t('terms.block-3-title') }}
-      </router-link>
-      <router-link :to="{ hash: '#block4' }" class="terms__anchor">
-        {{ $t('terms.block-4-title') }}
-      </router-link>
-      <router-link :to="{ hash: '#block5' }" class="terms__anchor">
-        {{ $t('terms.block-5-title') }}
-      </router-link>
-      <router-link :to="{ hash: '#block6' }" class="terms__anchor">
-        {{ $t('terms.block-6-title') }}
-      </router-link>
-      <router-link :to="{ hash: '#block7' }" class="terms__anchor">
-        {{ $t('terms.block-7-title') }}
-      </router-link>
-    </div>
+    <ol class="terms__upper-alpha-list terms__main-list">
+      <li
+        class="terms__paragraph"
+        v-for="i in 10"
+        :key="i"
+        v-html="$t(`terms.list-desc-${i}`)"
+      />
+    </ol>
 
-    <div class="terms__block" id="introduction">
+    <div class="terms__block">
       <h3>{{ $t('terms.block-1-title') }}</h3>
-      <p class="terms__paragraph" v-html="$t('terms.block-1-desc-part-1')" />
-      <p class="terms__paragraph" v-html="$t('terms.block-1-desc-part-2')" />
-      <p class="terms__paragraph">
-        {{ $t('terms.block-1-desc-part-3') }}
-      </p>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-1-desc-part-4') }}
-      </p>
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-1-subblock-1-title') }}
-      </h4>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-1-subblock-1-desc') }}
-      </p>
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-1-subblock-2-title') }}
-      </h4>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-1-subblock-2-desc') }}
-      </p>
-    </div>
-
-    <div class="terms__block" id="swapica-service">
-      <h3>{{ $t('terms.block-2-title') }}</h3>
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-2-subblock-1-title') }}
-      </h4>
-      <p
-        class="terms__paragraph"
-        v-html="$t('terms.block-2-subblock-1-desc')"
-      />
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-2-subblock-2-title') }}
-      </h4>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-2-subblock-2-desc') }}
-      </p>
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-2-subblock-3-title') }}
-      </h4>
-      <p
-        class="terms__paragraph"
-        v-html="$t('terms.block-2-subblock-3-desc')"
-      />
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-2-subblock-4-title') }}
-      </h4>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-2-subblock-4-desc-1') }}
-      </p>
-      <ul class="terms__list-ul">
-        <li class="terms__paragraph">
-          {{ $t('terms.block-2-subblock-4-list-desc-1') }}
+      <ol class="terms__numeric-list">
+        <li class="terms__paragraph" v-for="i in 7" :key="i">
+          <template v-if="i === 1">
+            <span class="terms__list-item-span">
+              {{ $t('terms.block-1-list-desc-1') }}</span
+            >
+            <ul class="terms__numeric-list-with-temples">
+              <li
+                v-for="num in 9"
+                :key="num"
+                class="terms__paragraph"
+                v-html="$t(`terms.block-1-subblock-1-list-desc-${num}`)"
+              />
+            </ul>
+          </template>
+          <template v-else>
+            <span
+              class="terms__list-item-span"
+              v-html="$t(`terms.block-1-list-desc-${i}`)"
+            />
+          </template>
         </li>
-        <li class="terms__paragraph">
-          {{ $t('terms.block-2-subblock-4-list-desc-2') }}
-        </li>
-        <li class="terms__paragraph">
-          {{ $t('terms.block-2-subblock-4-list-desc-3') }}
-        </li>
-      </ul>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-2-subblock-4-desc-2') }}
-      </p>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-2-subblock-4-desc-3') }}
-      </p>
-    </div>
-
-    <div class="terms__block" id="your-use-of-swapica-service">
-      <h3>{{ $t('terms.block-3-title') }}</h3>
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-3-subblock-1-title') }}
-      </h4>
-
-      <p
-        class="terms__paragraph"
-        v-html="$t('terms.block-3-subblock-1-desc-1')"
-      />
-      <p class="terms__paragraph">
-        {{ $t('terms.block-3-subblock-1-desc-2') }}
-      </p>
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-3-subblock-2-title') }}
-      </h4>
-
-      <h5 class="terms__subsubblock-title">
-        {{ $t('terms.block-3-subblock-2-subsubblock-1-title') }}
-      </h5>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-3-subblock-2-subsubblock-1-desc-1') }}
-      </p>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-3-subblock-2-subsubblock-1-desc-2') }}
-      </p>
-
-      <h5 class="terms__subsubblock-title">
-        {{ $t('terms.block-3-subblock-2-subsubblock-2-title') }}
-      </h5>
-      <p
-        class="terms__paragraph"
-        v-html="$t('terms.block-3-subblock-2-subsubblock-2-desc-1')"
-      />
-      <p
-        class="terms__paragraph"
-        v-html="$t('terms.block-3-subblock-2-subsubblock-2-desc-2')"
-      />
-
-      <h4 class="terms__subblock-title">
-        {{ $t('terms.block-3-subblock-3-title') }}
-      </h4>
-
-      <h5 class="terms__subsubblock-title">
-        {{ $t('terms.block-3-subblock-3-subsubblock-1-title') }}
-      </h5>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-3-subblock-3-subsubblock-1-desc-1') }}
-      </p>
-      <ul class="terms__list-ul">
-        <li class="terms__paragraph">
-          {{ $t('terms.block-3-subblock-3-subsubblock-1-list-desc-1') }}
-        </li>
-        <li
-          class="terms__paragraph"
-          v-html="$t('terms.block-3-subblock-3-subsubblock-1-list-desc-2')"
-        />
-      </ul>
-      <p class="terms__paragraph">
-        {{ $t('terms.block-3-subblock-3-subsubblock-1-desc-2') }}
-      </p>
+      </ol>
     </div>
   </div>
 </template>
@@ -205,6 +72,10 @@
     text-decoration: underline;
     line-height: inherit;
     color: var(--text-primary-dark);
+  }
+
+  i {
+    font-style: italic;
   }
 
   @include respond-to(tablet) {
@@ -247,25 +118,75 @@
   margin-bottom: toRem(40);
 }
 
-.terms__list-ul {
-  margin-top: toRem(16);
-  padding-left: toRem(30);
+.terms__numeric-list-with-temples {
+  margin-top: toRem(8);
+  counter-reset: value;
 
-  li {
-    list-style-type: disc;
+  /* stylelint-disable-next-line no-descending-specificity */
+  > li {
+    display: table;
+    margin-top: toRem(8);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:before {
+      counter-increment: value;
+      content: '(' counter(value) ') ';
+      display: table-cell;
+      padding-right: 0.6em;
+    }
+  }
+}
+
+.terms__upper-alpha-list {
+  margin-top: toRem(16);
+  padding-left: toRem(16);
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  > li {
+    list-style-type: upper-alpha;
     margin-top: toRem(8);
 
     &:first-child {
       margin-top: 0;
     }
   }
+}
 
-  @include respond-to(tablet) {
-    padding-left: toRem(12);
+.terms__numeric-list {
+  margin-top: toRem(16);
+  counter-reset: value;
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  > li {
+    display: table;
+    margin-top: toRem(8);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:before {
+      counter-increment: value;
+      content: '1.' counter(value) ' ';
+      display: table-cell;
+      padding-right: 0.6em;
+    }
   }
 }
 
 .terms__subsubblock-title {
   margin-top: toRem(16);
+}
+
+.terms__main-list {
+  margin-bottom: toRem(40);
+}
+
+.terms__list-item-span {
+  font-size: inherit;
+  font-weight: inherit;
 }
 </style>

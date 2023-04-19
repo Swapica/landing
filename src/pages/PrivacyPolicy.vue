@@ -666,11 +666,19 @@
   width: 100%;
   table-layout: fixed;
 
+  @include respond-to(small) {
+    table-layout: initial;
+  }
+
   th,
   td {
     padding: toRem(10);
     color: var(--text-primary-main);
     border: toRem(1) solid var(--primary-main);
+
+    @include respond-to(small) {
+      padding: toRem(5);
+    }
   }
 
   thead {
@@ -679,6 +687,10 @@
       line-height: 1.2;
       text-align: center;
       color: var(--text-primary-dark);
+
+      @include respond-to(small) {
+        font-size: toRem(14);
+      }
     }
   }
 
@@ -686,6 +698,10 @@
     td {
       font-size: toRem(16);
       line-height: 1.2;
+
+      @include respond-to(small) {
+        font-size: toRem(12);
+      }
     }
   }
 }

@@ -177,7 +177,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.financial-information-lbl') }}
                         </li>
@@ -197,7 +197,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.perfomance-contract-lbl') }}
                         </li>
@@ -213,7 +213,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.financial-information-lbl') }}
                         </li>
@@ -233,7 +233,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.perfomance-contract-lbl') }}
                         </li>
@@ -255,7 +255,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.financial-information-lbl') }}
                         </li>
@@ -272,7 +272,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.perfomance-contract-lbl') }}
                         </li>
@@ -291,7 +291,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{
                             $t('privacy-policy.correspondence-information-lbl')
@@ -300,7 +300,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.perfomance-contract-lbl') }}
                         </li>
@@ -322,7 +322,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.financial-information-lbl') }}
                         </li>
@@ -342,7 +342,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.obligations-lbl') }}
                         </li>
@@ -358,7 +358,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{
                             $t('privacy-policy.transactions-information-lbl')
@@ -375,7 +375,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.perfomance-contract-lbl') }}
                         </li>
@@ -397,7 +397,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{
                             $t('privacy-policy.correspondence-information-lbl')
@@ -409,7 +409,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.perfomance-contract-lbl') }}
                         </li>
@@ -431,7 +431,7 @@
                       }}
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{
                             $t('privacy-policy.correspondence-information-lbl')
@@ -448,7 +448,7 @@
                       </ul>
                     </td>
                     <td>
-                      <ul class="privacy-policy__dash-list">
+                      <ul class="privacy-policy__disc-list">
                         <li>
                           {{ $t('privacy-policy.perfomance-contract-lbl') }}
                         </li>
@@ -584,44 +584,53 @@
 .privacy-policy__numeric-list-with-temples {
   margin-top: toRem(8);
   counter-reset: value;
+  padding-left: toRem(48);
+
+  @include respond-to(small) {
+    padding-left: toRem(20);
+  }
 
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
-    display: table;
     margin-top: toRem(8);
+    position: relative;
 
     &:before {
       counter-increment: value;
       content: '(' counter(value) ') ';
-      display: table-cell;
-      padding-right: toRem(10);
+      position: absolute;
+      width: toRem(40);
+      left: toRem(-48);
+      text-align: right;
     }
   }
 }
 
 .privacy-policy__upper-alpha-list {
-  margin-top: toRem(16);
-  padding-left: toRem(16);
+  padding-left: toRem(56);
+
+  @include respond-to(small) {
+    padding-left: toRem(16);
+  }
 
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
     list-style-type: upper-alpha;
     margin-top: toRem(16);
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
-.privacy-policy__dash-list {
+.privacy-policy__disc-list {
   padding-left: toRem(16);
 
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
     margin-top: toRem(4);
-
-    &:before {
-      content: '–';
-      position: absolute;
-      margin-left: -1.1em;
-    }
+    list-style-type: disc;
   }
 }
 
@@ -639,14 +648,22 @@
     }
 
     ol.privacy-policy__numeric-list {
+      padding-left: toRem(56);
+
+      @include respond-to(small) {
+        padding-left: toRem(20);
+      }
+
       > li {
-        display: table;
+        position: relative;
       }
 
       > li:before {
-        padding-right: toRem(10);
         content: counters(item, '.') ' ';
-        display: table-cell;
+        position: absolute;
+        width: toRem(48);
+        left: toRem(-56);
+        text-align: right;
       }
     }
   }
@@ -662,9 +679,13 @@
 }
 
 .privacy-policy__table {
-  margin-top: toRem(20);
+  margin-top: toRem(32);
   width: 100%;
   table-layout: fixed;
+  background: url('/backgrounds/block-bg.svg') no-repeat;
+  background-size: 100% 100%;
+  padding: toRem(16) toRem(16) toRem(26) toRem(26);
+  border-collapse: separate;
 
   @include respond-to(small) {
     table-layout: initial;
@@ -672,9 +693,8 @@
 
   th,
   td {
-    padding: toRem(10);
+    padding: toRem(12);
     color: var(--text-primary-main);
-    border: toRem(1) solid var(--primary-main);
 
     @include respond-to(small) {
       padding: toRem(5);
@@ -683,9 +703,8 @@
 
   thead {
     th {
-      font-size: toRem(16);
+      font-size: toRem(20);
       line-height: 1.2;
-      text-align: center;
       color: var(--text-primary-dark);
 
       @include respond-to(small) {
@@ -696,17 +715,14 @@
 
   tbody {
     td {
-      font-size: toRem(16);
+      font-size: toRem(20);
       line-height: 1.2;
+      border-top: toRem(1) solid var(--primary-light);
 
       @include respond-to(small) {
         font-size: toRem(12);
       }
     }
   }
-}
-
-.privacy-policy__table-purpose-msg {
-  text-align: center;
 }
 </style>

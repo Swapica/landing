@@ -11,210 +11,214 @@
       {{ $t('terms.effective-desc') }}
     </p>
 
-    <ol class="terms__upper-alpha-list terms__main-list">
-      <li
-        class="terms__paragraph"
-        v-for="i in 10"
-        :key="i"
-        v-html="$t(`terms.list-desc-${i}`)"
-      />
-    </ol>
-
-    <ol class="terms__numeric-list">
-      <li class="terms__block-title">
-        {{ $t('terms.block-1-title') }}
-        <ol class="terms__numeric-list">
-          <li class="terms__paragraph" v-for="i in 7" :key="i">
-            <template v-if="i === 1">
-              <span class="terms__list-item-span">
-                {{ $t('terms.block-1-list-desc-1') }}</span
-              >
-              <ul class="terms__numeric-list-with-temples">
-                <li
-                  v-for="num in 9"
-                  :key="num"
-                  class="terms__paragraph"
-                  v-html="$t(`terms.block-1-subblock-1-list-desc-${num}`)"
-                />
-              </ul>
-            </template>
-            <template v-else>
-              <span
-                class="terms__list-item-span"
-                v-html="$t(`terms.block-1-list-desc-${i}`)"
-              />
-            </template>
-          </li>
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-2-title') }}
-
-        <ol class="terms__numeric-list">
-          <li class="terms__paragraph" v-for="i in 6" :key="i">
-            <template v-if="i === 3">
-              <span class="terms__list-item-span">
-                {{ $t('terms.block-2-list-desc-3') }}</span
-              >
-              <ul class="terms__numeric-list-with-temples">
-                <li
-                  v-for="num in 4"
-                  :key="num"
-                  class="terms__paragraph"
-                  v-html="$t(`terms.block-2-subblock-3-list-desc-${num}`)"
-                />
-              </ul>
-            </template>
-            <template v-else>
-              <span
-                class="terms__list-item-span"
-                v-html="$t(`terms.block-2-list-desc-${i}`)"
-              />
-            </template>
-          </li>
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-3-title') }}
-        <ol class="terms__numeric-list">
-          <li class="terms__paragraph" v-for="i in 6" :key="i">
-            <template v-if="i === 1">
-              <span class="terms__list-item-span">
-                {{ $t('terms.block-3-list-desc-1') }}</span
-              >
-              <ul class="terms__numeric-list-with-temples">
-                <li
-                  v-for="num in 4"
-                  :key="num"
-                  class="terms__paragraph"
-                  v-html="$t(`terms.block-3-subblock-1-list-desc-${num}`)"
-                />
-              </ul>
-            </template>
-            <template v-else>
-              <span
-                class="terms__list-item-span"
-                v-html="$t(`terms.block-3-list-desc-${i}`)"
-              />
-            </template>
-          </li>
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-4-title') }}
-        <ol class="terms__numeric-list">
+    <div class="terms__content">
+      <div class="terms__texts">
+        <ol class="terms__upper-alpha-list terms__main-list">
           <li
             class="terms__paragraph"
-            v-for="i in 14"
+            v-for="i in 10"
             :key="i"
-            v-html="$t(`terms.block-4-list-desc-${i}`)"
+            v-html="$t(`terms.list-desc-${i}`)"
           />
         </ol>
-      </li>
 
-      <li class="terms__block-title">
-        {{ $t('terms.block-5-title') }}
         <ol class="terms__numeric-list">
-          <li class="terms__paragraph">
-            {{ $t('terms.block-5-list-desc-1') }}
+          <li class="terms__block-title">
+            {{ $t('terms.block-1-title') }}
+            <ol class="terms__numeric-list">
+              <li class="terms__paragraph" v-for="i in 7" :key="i">
+                <template v-if="i === 1">
+                  <span class="terms__list-item-span">
+                    {{ $t('terms.block-1-list-desc-1') }}</span
+                  >
+                  <ul class="terms__numeric-list-with-temples">
+                    <li
+                      v-for="num in 9"
+                      :key="num"
+                      class="terms__paragraph"
+                      v-html="$t(`terms.block-1-subblock-1-list-desc-${num}`)"
+                    />
+                  </ul>
+                </template>
+                <template v-else>
+                  <span
+                    class="terms__list-item-span"
+                    v-html="$t(`terms.block-1-list-desc-${i}`)"
+                  />
+                </template>
+              </li>
+            </ol>
+          </li>
 
-            <ul class="terms__numeric-list-with-temples">
+          <li class="terms__block-title">
+            {{ $t('terms.block-2-title') }}
+
+            <ol class="terms__numeric-list">
+              <li class="terms__paragraph" v-for="i in 6" :key="i">
+                <template v-if="i === 3">
+                  <span class="terms__list-item-span">
+                    {{ $t('terms.block-2-list-desc-3') }}</span
+                  >
+                  <ul class="terms__numeric-list-with-temples">
+                    <li
+                      v-for="num in 4"
+                      :key="num"
+                      class="terms__paragraph"
+                      v-html="$t(`terms.block-2-subblock-3-list-desc-${num}`)"
+                    />
+                  </ul>
+                </template>
+                <template v-else>
+                  <span
+                    class="terms__list-item-span"
+                    v-html="$t(`terms.block-2-list-desc-${i}`)"
+                  />
+                </template>
+              </li>
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-3-title') }}
+            <ol class="terms__numeric-list">
+              <li class="terms__paragraph" v-for="i in 6" :key="i">
+                <template v-if="i === 1">
+                  <span class="terms__list-item-span">
+                    {{ $t('terms.block-3-list-desc-1') }}</span
+                  >
+                  <ul class="terms__numeric-list-with-temples">
+                    <li
+                      v-for="num in 4"
+                      :key="num"
+                      class="terms__paragraph"
+                      v-html="$t(`terms.block-3-subblock-1-list-desc-${num}`)"
+                    />
+                  </ul>
+                </template>
+                <template v-else>
+                  <span
+                    class="terms__list-item-span"
+                    v-html="$t(`terms.block-3-list-desc-${i}`)"
+                  />
+                </template>
+              </li>
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-4-title') }}
+            <ol class="terms__numeric-list">
               <li
-                v-for="num in 21"
-                :key="num"
                 class="terms__paragraph"
-                v-html="$t(`terms.block-5-subblock-1-list-desc-${num}`)"
+                v-for="i in 14"
+                :key="i"
+                v-html="$t(`terms.block-4-list-desc-${i}`)"
               />
-            </ul>
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-5-title') }}
+            <ol class="terms__numeric-list">
+              <li class="terms__paragraph">
+                {{ $t('terms.block-5-list-desc-1') }}
+
+                <ul class="terms__numeric-list-with-temples">
+                  <li
+                    v-for="num in 21"
+                    :key="num"
+                    class="terms__paragraph"
+                    v-html="$t(`terms.block-5-subblock-1-list-desc-${num}`)"
+                  />
+                </ul>
+              </li>
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-6-title') }}
+            <ol class="terms__numeric-list">
+              <li
+                class="terms__paragraph"
+                v-for="i in 2"
+                :key="i"
+                v-html="$t(`terms.block-6-list-desc-${i}`)"
+              />
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-7-title') }}
+            <ol class="terms__numeric-list">
+              <li
+                class="terms__paragraph"
+                v-for="i in 5"
+                :key="i"
+                v-html="$t(`terms.block-7-list-desc-${i}`)"
+              />
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-8-title') }}
+            <ol class="terms__numeric-list">
+              <li
+                class="terms__paragraph"
+                v-for="i in 5"
+                :key="i"
+                v-html="$t(`terms.block-8-list-desc-${i}`)"
+              />
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-9-title') }}
+            <ol class="terms__numeric-list">
+              <li
+                class="terms__paragraph"
+                v-for="i in 2"
+                :key="i"
+                v-html="$t(`terms.block-9-list-desc-${i}`)"
+              />
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-10-title') }}
+            <ol class="terms__numeric-list">
+              <li
+                class="terms__paragraph"
+                v-for="i in 3"
+                :key="i"
+                v-html="$t(`terms.block-10-list-desc-${i}`)"
+              />
+            </ol>
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-11-title') }}
+            <p
+              class="terms__paragraph"
+              v-for="i in 2"
+              :key="i"
+              v-html="$t(`terms.block-11-list-desc-${i}`)"
+            />
+          </li>
+
+          <li class="terms__block-title">
+            {{ $t('terms.block-12-title') }}
+            <ol class="terms__numeric-list">
+              <li
+                class="terms__paragraph"
+                v-for="i in 6"
+                :key="i"
+                v-html="$t(`terms.block-12-list-desc-${i}`)"
+              />
+            </ol>
           </li>
         </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-6-title') }}
-        <ol class="terms__numeric-list">
-          <li
-            class="terms__paragraph"
-            v-for="i in 2"
-            :key="i"
-            v-html="$t(`terms.block-6-list-desc-${i}`)"
-          />
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-7-title') }}
-        <ol class="terms__numeric-list">
-          <li
-            class="terms__paragraph"
-            v-for="i in 5"
-            :key="i"
-            v-html="$t(`terms.block-7-list-desc-${i}`)"
-          />
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-8-title') }}
-        <ol class="terms__numeric-list">
-          <li
-            class="terms__paragraph"
-            v-for="i in 5"
-            :key="i"
-            v-html="$t(`terms.block-8-list-desc-${i}`)"
-          />
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-9-title') }}
-        <ol class="terms__numeric-list">
-          <li
-            class="terms__paragraph"
-            v-for="i in 2"
-            :key="i"
-            v-html="$t(`terms.block-9-list-desc-${i}`)"
-          />
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-10-title') }}
-        <ol class="terms__numeric-list">
-          <li
-            class="terms__paragraph"
-            v-for="i in 3"
-            :key="i"
-            v-html="$t(`terms.block-10-list-desc-${i}`)"
-          />
-        </ol>
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-11-title') }}
-        <p
-          class="terms__paragraph"
-          v-for="i in 2"
-          :key="i"
-          v-html="$t(`terms.block-11-list-desc-${i}`)"
-        />
-      </li>
-
-      <li class="terms__block-title">
-        {{ $t('terms.block-12-title') }}
-        <ol class="terms__numeric-list">
-          <li
-            class="terms__paragraph"
-            v-for="i in 6"
-            :key="i"
-            v-html="$t(`terms.block-12-list-desc-${i}`)"
-          />
-        </ol>
-      </li>
-    </ol>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -275,24 +279,27 @@
 .terms__numeric-list-with-temples {
   margin-top: toRem(8);
   counter-reset: value;
+  padding-left: toRem(48);
 
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
-    display: table;
     margin-top: toRem(8);
+    position: relative;
 
     &:before {
       counter-increment: value;
       content: '(' counter(value) ') ';
-      display: table-cell;
-      padding-right: toRem(10);
+      position: absolute;
+      width: toRem(40);
+      left: toRem(-48);
+      text-align: right;
     }
   }
 }
 
 .terms__upper-alpha-list {
   margin-top: toRem(16);
-  padding-left: toRem(16);
+  padding-left: toRem(56);
 
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
@@ -315,14 +322,18 @@
     }
 
     ol.terms__numeric-list {
+      padding-left: toRem(56);
+
       > li {
-        display: table;
+        position: relative;
       }
 
       > li:before {
-        padding-right: toRem(10);
         content: counters(item, '.') ' ';
-        display: table-cell;
+        position: absolute;
+        width: toRem(48);
+        left: toRem(-56);
+        text-align: right;
       }
     }
   }
@@ -335,5 +346,9 @@
 .terms__list-item-span {
   font-size: inherit;
   font-weight: inherit;
+}
+
+.terms__texts {
+  max-width: toRem(891);
 }
 </style>

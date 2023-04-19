@@ -245,6 +245,18 @@
     "block-8-subblock-1-list-desc-9": "not to be subject to a decision based solely on automated processing; and",
     "block-8-subblock-1-list-desc-10": "to complain to the local data protection authority if your privacy rights are violated, or if you have suffered as a result of unlawful processing of your Personal Information.",
     "block-9-title": "TERMS",
-    "block-9-list-desc-1": "If you choose to access or use, or both, the Platform and Services, or both, such actions and any dispute over privacy is subject to this Privacy Policy and the <a href='https://swapica.io/terms'>Terms</a>, including limitations on damages, resolution of disputes and application of the laws of the Seychelles."
+    "block-9-list-desc-1": "If you choose to access or use, or both, the Platform and Services, or both, such actions and any dispute over privacy is subject to this Privacy Policy and the <a href='https://swapica.io/terms'>Terms</a>, including limitations on damages, resolution of disputes and application of the laws of the Seychelles.",
+    "purpose-title": "Purpose",
+    "personal-information-title": "Kind of Personal Information",
+    "legal-basis-title": "Legal Basis",
+    "purpose-msg": "Purpose, provided for in section 3.1({number})",
+    "financial-information-lbl": "Financial Information",
+    "transactions-information-lbl": "Transactions Information",
+    "correspondence-information-lbl": "Correspondence Information",
+    "user-information-lbl": "User Information",
+    "perfomance-contract-lbl": "performance of a contract",
+    "obligations-lbl": "compliance with legal obligations",
+    "legitimate-interests-lbl": "legitimate interests",
+    "consent-lbl": "your consent"
   }
 }

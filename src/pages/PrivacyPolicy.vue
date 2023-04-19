@@ -161,6 +161,308 @@
               <span class="privacy-policy__list-item-span">
                 {{ $t('privacy-policy.block-6-list-desc-1') }}</span
               >
+              <table class="privacy-policy__table">
+                <thead class="privacy-policy__table-head">
+                  <th>{{ $t('privacy-policy.purpose-title') }}</th>
+                  <th>{{ $t('privacy-policy.personal-information-title') }}</th>
+                  <th>{{ $t('privacy-policy.legal-basis-title') }}</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 1,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.financial-information-lbl') }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.transactions-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.user-information-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.perfomance-contract-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 2,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.financial-information-lbl') }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.transactions-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.user-information-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.perfomance-contract-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.obligations-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.legitimate-interests-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 3,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.financial-information-lbl') }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.transactions-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.perfomance-contract-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.legitimate-interests-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 4,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.perfomance-contract-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.legitimate-interests-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.obligations-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 5,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.financial-information-lbl') }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.transactions-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.user-information-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.obligations-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 6,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{
+                            $t('privacy-policy.transactions-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.user-information-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.perfomance-contract-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.legitimate-interests-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.consent-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 7,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.user-information-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.perfomance-contract-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.legitimate-interests-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.consent-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="privacy-policy__table-purpose-msg">
+                      {{
+                        $t('privacy-policy.purpose-msg', {
+                          number: 8,
+                        })
+                      }}
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{
+                            $t('privacy-policy.correspondence-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{
+                            $t('privacy-policy.transactions-information-lbl')
+                          }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.user-information-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="privacy-policy__dash-list">
+                        <li>
+                          {{ $t('privacy-policy.perfomance-contract-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.legitimate-interests-lbl') }}
+                        </li>
+                        <li>
+                          {{ $t('privacy-policy.consent-lbl') }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </template>
             <template v-else>
               <span
@@ -308,6 +610,21 @@
   }
 }
 
+.privacy-policy__dash-list {
+  padding-left: toRem(16);
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  > li {
+    margin-top: toRem(4);
+
+    &:before {
+      content: '–';
+      position: absolute;
+      margin-left: -1.1em;
+    }
+  }
+}
+
 .privacy-policy__numeric-list {
   list-style-type: none;
   counter-reset: item;
@@ -342,5 +659,38 @@
 .privacy-policy__list-item-span {
   font-size: inherit;
   font-weight: inherit;
+}
+
+.privacy-policy__table {
+  margin-top: toRem(20);
+  width: 100%;
+  table-layout: fixed;
+
+  th,
+  td {
+    padding: toRem(10);
+    color: var(--text-primary-main);
+    border: toRem(1) solid var(--primary-main);
+  }
+
+  thead {
+    th {
+      font-size: toRem(16);
+      line-height: 1.2;
+      text-align: center;
+      color: var(--text-primary-dark);
+    }
+  }
+
+  tbody {
+    td {
+      font-size: toRem(16);
+      line-height: 1.2;
+    }
+  }
+}
+
+.privacy-policy__table-purpose-msg {
+  text-align: center;
 }
 </style>

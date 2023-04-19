@@ -118,14 +118,26 @@ h2 {
 
 h3 {
   font-size: toRem(32);
+
+  @include respond-to(tablet) {
+    font-size: toRem(24);
+  }
 }
 
 h4 {
-  font-size: toRem(24);
+  font-size: toRem(28);
+
+  @include respond-to(tablet) {
+    font-size: toRem(20);
+  }
 }
 
 h5 {
-  font-size: toRem(14);
+  font-size: toRem(24);
+
+  @include respond-to(tablet) {
+    font-size: toRem(18);
+  }
 }
 
 a {

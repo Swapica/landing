@@ -18,12 +18,31 @@ const routes: Array<RouteRecordRaw> = [
     name: ROUTE_NAMES.homepage,
     component: () => import('@/pages/Homepage.vue'),
   },
+  {
+    path: '/terms',
+    name: ROUTE_NAMES.terms,
+    component: () => import('@/pages/Terms.vue'),
+  },
+  {
+    path: '/privacy-policy',
+    name: ROUTE_NAMES.privacyPolicy,
+    component: () => import('@/pages/PrivacyPolicy.vue'),
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  scrollBehavior: () => ({ top: 0, left: 0 }),
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    } else {
+      return { top: 0, left: 0 }
+    }
+  },
 })
 
 export { router, useRouter, useRoute }

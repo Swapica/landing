@@ -23,6 +23,11 @@ const routes: Array<RouteRecordRaw> = [
     name: ROUTE_NAMES.terms,
     component: () => import('@/pages/Terms.vue'),
   },
+  {
+    path: '/privacy-policy',
+    name: ROUTE_NAMES.privacyPolicy,
+    component: () => import('@/pages/PrivacyPolicy.vue'),
+  },
 ]
 
 const router = createRouter({

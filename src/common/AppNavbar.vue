@@ -16,6 +16,12 @@
         <router-link class="app-navbar__link" :to="{ name: $routes.terms }">
           {{ $t('app-navbar.terms-link') }}
         </router-link>
+        <router-link
+          class="app-navbar__link"
+          :to="{ name: $routes.privacyPolicy }"
+        >
+          {{ $t('app-navbar.privacy-policy-link') }}
+        </router-link>
       </div>
     </div>
     <div>

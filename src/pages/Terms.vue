@@ -297,7 +297,7 @@
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
     list-style-type: upper-alpha;
-    margin-top: toRem(8);
+    margin-top: toRem(16);
   }
 }
 
@@ -308,7 +308,7 @@
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
     counter-increment: item;
-    margin-top: toRem(8);
+    margin-top: toRem(16);
 
     &:before {
       content: counters(item, '.') '. ';

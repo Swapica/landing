@@ -383,6 +383,10 @@
   counter-reset: value;
   padding-left: toRem(48);
 
+  @include respond-to(small) {
+    padding-left: toRem(20);
+  }
+
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
     margin-top: toRem(8);
@@ -401,6 +405,10 @@
 
 .terms__upper-alpha-list {
   padding-left: toRem(56);
+
+  @include respond-to(small) {
+    padding-left: toRem(16);
+  }
 
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
@@ -428,6 +436,10 @@
 
     ol.terms__numeric-list {
       padding-left: toRem(56);
+
+      @include respond-to(small) {
+        padding-left: toRem(20);
+      }
 
       > li {
         position: relative;
@@ -473,6 +485,10 @@
   position: sticky;
   top: toRem(100);
   padding: toRem(24) toRem(16) toRem(34) toRem(76);
+
+  @include respond-to(small) {
+    padding-left: toRem(50);
+  }
 
   /* stylelint-disable no-descending-specificity */
   > li {

@@ -260,25 +260,6 @@
   }
 }
 
-.terms__anchors {
-  display: flex;
-  flex-direction: column;
-  gap: toRem(12);
-  margin-bottom: toRem(64);
-
-  @include respond-to(tablet) {
-    margin-bottom: toRem(32);
-  }
-}
-
-.terms__anchor {
-  font-size: toRem(24);
-
-  @include respond-to(tablet) {
-    font-size: toRem(18);
-  }
-}
-
 .terms__block-title {
   /* stylelint-disable-next-line declaration-no-important */
   margin-top: toRem(40) !important;

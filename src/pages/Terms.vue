@@ -23,7 +23,7 @@
         </ol>
 
         <ol class="terms__numeric-list">
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="definitions-and-interpretations">
             {{ $t('terms.block-1-title') }}
             <ol class="terms__numeric-list">
               <li class="terms__paragraph" v-for="i in 7" :key="i">
@@ -50,7 +50,10 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li
+            class="terms__block-title"
+            id="access-and-use-the-platform-and-services"
+          >
             {{ $t('terms.block-2-title') }}
 
             <ol class="terms__numeric-list">
@@ -78,7 +81,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="use-of-the-platform-and-services">
             {{ $t('terms.block-3-title') }}
             <ol class="terms__numeric-list">
               <li class="terms__paragraph" v-for="i in 6" :key="i">
@@ -105,7 +108,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="content-and-ip-rights">
             {{ $t('terms.block-4-title') }}
             <ol class="terms__numeric-list">
               <li
@@ -117,7 +120,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="risks-acknowledgement">
             {{ $t('terms.block-5-title') }}
             <ol class="terms__numeric-list">
               <li class="terms__paragraph">
@@ -135,7 +138,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="gas-fees-and-taxes">
             {{ $t('terms.block-6-title') }}
             <ol class="terms__numeric-list">
               <li
@@ -147,7 +150,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="term-and-termination">
             {{ $t('terms.block-7-title') }}
             <ol class="terms__numeric-list">
               <li
@@ -159,7 +162,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="indemnification-and-disclaimer">
             {{ $t('terms.block-8-title') }}
             <ol class="terms__numeric-list">
               <li
@@ -171,7 +174,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="limitation-of-liability">
             {{ $t('terms.block-9-title') }}
             <ol class="terms__numeric-list">
               <li
@@ -183,7 +186,10 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li
+            class="terms__block-title"
+            id="governing-law-and-dispute-resolution"
+          >
             {{ $t('terms.block-10-title') }}
             <ol class="terms__numeric-list">
               <li
@@ -195,7 +201,7 @@
             </ol>
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="notices">
             {{ $t('terms.block-11-title') }}
             <p
               class="terms__paragraph"
@@ -205,7 +211,7 @@
             />
           </li>
 
-          <li class="terms__block-title">
+          <li class="terms__block-title" id="miscellaneous-provisions">
             {{ $t('terms.block-12-title') }}
             <ol class="terms__numeric-list">
               <li
@@ -218,6 +224,102 @@
           </li>
         </ol>
       </div>
+
+      <ol class="terms__numeric-list terms__anchors">
+        <li>
+          <router-link
+            :to="{ hash: '#definitions-and-interpretations' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-1-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#access-and-use-the-platform-and-services' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-2-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#use-of-the-platform-and-services' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-3-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#content-and-ip-rights' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-4-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#risks-acknowledgement' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-5-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#gas-fees-and-taxes' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-6-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#term-and-termination' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-7-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#indemnification-and-disclaimer' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-8-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#limitation-of-liability' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-9-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#governing-law-and-dispute-resolution' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-10-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ hash: '#notices' }" class="terms__anchor">
+            {{ $t('terms.block-11-title') }}
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ hash: '#miscellaneous-provisions' }"
+            class="terms__anchor"
+          >
+            {{ $t('terms.block-12-title') }}
+          </router-link>
+        </li>
+      </ol>
     </div>
   </div>
 </template>
@@ -298,13 +400,16 @@
 }
 
 .terms__upper-alpha-list {
-  margin-top: toRem(16);
   padding-left: toRem(56);
 
   /* stylelint-disable-next-line no-descending-specificity */
   > li {
     list-style-type: upper-alpha;
     margin-top: toRem(16);
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -348,7 +453,50 @@
   font-weight: inherit;
 }
 
-.terms__texts {
-  max-width: toRem(891);
+.terms__content {
+  display: grid;
+  grid-template-columns: minmax(toRem(200), toRem(891)) minmax(toRem(300), 1fr);
+  gap: toRem(20);
+
+  @include respond-to(xmedium) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.terms__anchors {
+  background: url('/backgrounds/block-bg.svg') no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: toRem(100);
+  padding: toRem(24) toRem(16) toRem(34) toRem(76);
+
+  /* stylelint-disable no-descending-specificity */
+  > li {
+    position: relative;
+    margin-top: toRem(8);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  > li:before {
+    position: absolute;
+    width: toRem(48);
+    left: toRem(-56);
+    text-align: right;
+  }
+  /* stylelint-enable no-descending-specificity */
+
+  @include respond-to(xmedium) {
+    grid-row-start: 1;
+    max-width: toRem(429);
+    position: relative;
+    top: 0;
+  }
 }
 </style>

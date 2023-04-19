@@ -78,6 +78,149 @@
           </li>
         </ol>
       </li>
+
+      <li class="privacy-policy__block-title">
+        {{ $t('privacy-policy.block-3-title') }}
+
+        <p class="privacy-policy__paragraph">
+          {{ $t('privacy-policy.block-3-list-desc-1') }}
+        </p>
+        <ul class="privacy-policy__numeric-list-with-temples">
+          <li
+            v-for="num in 9"
+            :key="num"
+            class="privacy-policy__paragraph"
+            v-html="$t(`privacy-policy.block-3-subblock-1-list-desc-${num}`)"
+          />
+        </ul>
+      </li>
+
+      <li class="privacy-policy__block-title">
+        {{ $t('privacy-policy.block-4-title') }}
+        <ol class="privacy-policy__numeric-list">
+          <li class="privacy-policy__paragraph" v-for="i in 3" :key="i">
+            <template v-if="i === 1">
+              <span class="privacy-policy__list-item-span">
+                {{ $t('privacy-policy.block-4-list-desc-1') }}</span
+              >
+              <ul class="privacy-policy__numeric-list-with-temples">
+                <li
+                  v-for="num in 6"
+                  :key="num"
+                  class="privacy-policy__paragraph"
+                  v-html="
+                    $t(`privacy-policy.block-4-subblock-1-list-desc-${num}`)
+                  "
+                />
+              </ul>
+            </template>
+            <template v-else>
+              <span
+                class="privacy-policy__list-item-span"
+                v-html="$t(`privacy-policy.block-4-list-desc-${i}`)"
+              />
+            </template>
+          </li>
+        </ol>
+      </li>
+
+      <li class="privacy-policy__block-title">
+        {{ $t('privacy-policy.block-5-title') }}
+        <ol class="privacy-policy__numeric-list">
+          <li class="privacy-policy__paragraph" v-for="i in 3" :key="i">
+            <template v-if="i === 2">
+              <span class="privacy-policy__list-item-span">
+                {{ $t('privacy-policy.block-5-list-desc-2') }}</span
+              >
+              <ul class="privacy-policy__numeric-list-with-temples">
+                <li
+                  v-for="num in 3"
+                  :key="num"
+                  class="privacy-policy__paragraph"
+                  v-html="
+                    $t(`privacy-policy.block-5-subblock-2-list-desc-${num}`)
+                  "
+                />
+              </ul>
+            </template>
+            <template v-else>
+              <span
+                class="privacy-policy__list-item-span"
+                v-html="$t(`privacy-policy.block-5-list-desc-${i}`)"
+              />
+            </template>
+          </li>
+        </ol>
+      </li>
+
+      <li class="privacy-policy__block-title">
+        {{ $t('privacy-policy.block-6-title') }}
+        <ol class="privacy-policy__numeric-list">
+          <li class="privacy-policy__paragraph" v-for="i in 5" :key="i">
+            <template v-if="i === 1">
+              <span class="privacy-policy__list-item-span">
+                {{ $t('privacy-policy.block-6-list-desc-1') }}</span
+              >
+            </template>
+            <template v-else>
+              <span
+                class="privacy-policy__list-item-span"
+                v-html="$t(`privacy-policy.block-6-list-desc-${i}`)"
+              />
+            </template>
+          </li>
+        </ol>
+      </li>
+
+      <li class="privacy-policy__block-title">
+        {{ $t('privacy-policy.block-7-title') }}
+        <ol class="privacy-policy__numeric-list">
+          <li
+            class="privacy-policy__paragraph"
+            v-for="i in 3"
+            :key="i"
+            v-html="$t(`privacy-policy.block-7-list-desc-${i}`)"
+          />
+        </ol>
+      </li>
+
+      <li class="privacy-policy__block-title">
+        {{ $t('privacy-policy.block-8-title') }}
+        <ol class="privacy-policy__numeric-list">
+          <li class="privacy-policy__paragraph" v-for="i in 3" :key="i">
+            <template v-if="i === 1">
+              <span class="privacy-policy__list-item-span">
+                {{ $t('privacy-policy.block-8-list-desc-1') }}</span
+              >
+              <ul class="privacy-policy__numeric-list-with-temples">
+                <li
+                  v-for="num in 10"
+                  :key="num"
+                  class="privacy-policy__paragraph"
+                  v-html="
+                    $t(`privacy-policy.block-8-subblock-1-list-desc-${num}`)
+                  "
+                />
+              </ul>
+            </template>
+            <template v-else>
+              <span
+                class="privacy-policy__list-item-span"
+                v-html="$t(`privacy-policy.block-8-list-desc-${i}`)"
+              />
+            </template>
+          </li>
+        </ol>
+      </li>
+
+      <li class="privacy-policy__block-title">
+        {{ $t('privacy-policy.block-9-title') }}
+
+        <p
+          class="privacy-policy__paragraph"
+          v-html="$t('privacy-policy.block-9-list-desc-1')"
+        />
+      </li>
     </ol>
   </div>
 </template>

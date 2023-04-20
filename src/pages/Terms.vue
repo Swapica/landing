@@ -374,7 +374,7 @@
   margin-bottom: toRem(16);
 
   @include respond-to(tablet) {
-    font-size: toRem(24);
+    font-size: toRem(20);
   }
 }
 
@@ -384,7 +384,7 @@
   padding-left: toRem(48);
 
   @include respond-to(small) {
-    padding-left: toRem(20);
+    padding-left: toRem(28);
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
@@ -407,7 +407,7 @@
   padding-left: toRem(56);
 
   @include respond-to(small) {
-    padding-left: toRem(16);
+    padding-left: toRem(36);
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
@@ -438,7 +438,7 @@
       padding-left: toRem(56);
 
       @include respond-to(small) {
-        padding-left: toRem(20);
+        padding-left: toRem(36);
       }
 
       > li {
@@ -467,7 +467,7 @@
 
 .terms__content {
   display: grid;
-  grid-template-columns: minmax(toRem(200), toRem(891)) minmax(toRem(300), 1fr);
+  grid-template-columns: minmax(toRem(200), toRem(891)) toRem(429);
   gap: toRem(20);
 
   @include respond-to(xmedium) {
@@ -484,11 +484,7 @@
   flex-direction: column;
   position: sticky;
   top: toRem(100);
-  padding: toRem(24) toRem(16) toRem(34) toRem(76);
-
-  @include respond-to(small) {
-    padding-left: toRem(50);
-  }
+  padding: toRem(24) toRem(16) toRem(38) toRem(86);
 
   /* stylelint-disable no-descending-specificity */
   > li {
@@ -505,14 +501,21 @@
     width: toRem(48);
     left: toRem(-56);
     text-align: right;
+    font-size: toRem(20);
   }
   /* stylelint-enable no-descending-specificity */
 
   @include respond-to(xmedium) {
-    grid-row-start: 1;
-    max-width: toRem(429);
-    position: relative;
-    top: 0;
+    display: none;
+  }
+}
+
+.terms__anchor {
+  font-size: toRem(20);
+  transition: 0.3s color;
+
+  &:hover {
+    color: var(--text-primary-dark);
   }
 }
 </style>

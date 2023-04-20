@@ -24,7 +24,7 @@
         </ol>
 
         <ol class="privacy-policy__numeric-list">
-          <li class="privacy-policy__block-title">
+          <li class="privacy-policy__block-title" id="our-relationship-to-you">
             {{ $t('privacy-policy.block-1-title') }}
             <ol class="privacy-policy__numeric-list">
               <li class="privacy-policy__paragraph" v-for="i in 4" :key="i">
@@ -57,7 +57,10 @@
             </ol>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li
+            class="privacy-policy__block-title"
+            id="personal-information-we-collect"
+          >
             {{ $t('privacy-policy.block-2-title') }}
             <ol class="privacy-policy__numeric-list">
               <li class="privacy-policy__paragraph" v-for="i in 4" :key="i">
@@ -86,7 +89,10 @@
             </ol>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li
+            class="privacy-policy__block-title"
+            id="use-of-personal-information"
+          >
             {{ $t('privacy-policy.block-3-title') }}
 
             <p class="privacy-policy__paragraph">
@@ -104,7 +110,10 @@
             </ul>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li
+            class="privacy-policy__block-title"
+            id="share-of-personal-information"
+          >
             {{ $t('privacy-policy.block-4-title') }}
             <ol class="privacy-policy__numeric-list">
               <li class="privacy-policy__paragraph" v-for="i in 3" :key="i">
@@ -133,7 +142,10 @@
             </ol>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li
+            class="privacy-policy__block-title"
+            id="security-protection-and-storage-of-personal-information"
+          >
             {{ $t('privacy-policy.block-5-title') }}
             <ol class="privacy-policy__numeric-list">
               <li class="privacy-policy__paragraph" v-for="i in 3" :key="i">
@@ -162,7 +174,10 @@
             </ol>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li
+            class="privacy-policy__block-title"
+            id="legal-basis-for-personal-information-processing"
+          >
             {{ $t('privacy-policy.block-6-title') }}
             <ol class="privacy-policy__numeric-list">
               <li class="privacy-policy__paragraph" v-for="i in 5" :key="i">
@@ -533,7 +548,10 @@
             </ol>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li
+            class="privacy-policy__block-title"
+            id="retention-of-personal-information"
+          >
             {{ $t('privacy-policy.block-7-title') }}
             <ol class="privacy-policy__numeric-list">
               <li
@@ -545,7 +563,10 @@
             </ol>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li
+            class="privacy-policy__block-title"
+            id="your-choices-and-privacy-rights"
+          >
             {{ $t('privacy-policy.block-8-title') }}
             <ol class="privacy-policy__numeric-list">
               <li class="privacy-policy__paragraph" v-for="i in 3" :key="i">
@@ -574,7 +595,7 @@
             </ol>
           </li>
 
-          <li class="privacy-policy__block-title">
+          <li class="privacy-policy__block-title" id="terms">
             {{ $t('privacy-policy.block-9-title') }}
 
             <p
@@ -587,7 +608,7 @@
       <ol class="privacy-policy__numeric-list privacy-policy__anchors">
         <li>
           <router-link
-            :to="{ hash: '#definitions-and-interpretations' }"
+            :to="{ hash: '#our-relationship-to-you' }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-1-title') }}
@@ -595,7 +616,7 @@
         </li>
         <li>
           <router-link
-            :to="{ hash: '#access-and-use-the-platform-and-services' }"
+            :to="{ hash: '#personal-information-we-collect' }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-2-title') }}
@@ -603,7 +624,7 @@
         </li>
         <li>
           <router-link
-            :to="{ hash: '#use-of-the-platform-and-services' }"
+            :to="{ hash: '#use-of-personal-information' }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-3-title') }}
@@ -611,7 +632,7 @@
         </li>
         <li>
           <router-link
-            :to="{ hash: '#content-and-ip-rights' }"
+            :to="{ hash: '#share-of-personal-information' }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-4-title') }}
@@ -619,7 +640,9 @@
         </li>
         <li>
           <router-link
-            :to="{ hash: '#risks-acknowledgement' }"
+            :to="{
+              hash: '#security-protection-and-storage-of-personal-information',
+            }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-5-title') }}
@@ -627,7 +650,7 @@
         </li>
         <li>
           <router-link
-            :to="{ hash: '#gas-fees-and-taxes' }"
+            :to="{ hash: '#legal-basis-for-personal-information-processing' }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-6-title') }}
@@ -635,7 +658,7 @@
         </li>
         <li>
           <router-link
-            :to="{ hash: '#term-and-termination' }"
+            :to="{ hash: '#retention-of-personal-information' }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-7-title') }}
@@ -643,17 +666,14 @@
         </li>
         <li>
           <router-link
-            :to="{ hash: '#indemnification-and-disclaimer' }"
+            :to="{ hash: '#your-choices-and-privacy-rights' }"
             class="privacy-policy__anchor"
           >
             {{ $t('privacy-policy.block-8-title') }}
           </router-link>
         </li>
         <li>
-          <router-link
-            :to="{ hash: '#limitation-of-liability' }"
-            class="privacy-policy__anchor"
-          >
+          <router-link :to="{ hash: '#terms' }" class="privacy-policy__anchor">
             {{ $t('privacy-policy.block-9-title') }}
           </router-link>
         </li>
@@ -712,7 +732,7 @@
   margin-bottom: toRem(16);
 
   @include respond-to(tablet) {
-    font-size: toRem(24);
+    font-size: toRem(20);
   }
 }
 
@@ -722,7 +742,7 @@
   padding-left: toRem(48);
 
   @include respond-to(small) {
-    padding-left: toRem(20);
+    padding-left: toRem(28);
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
@@ -745,7 +765,7 @@
   padding-left: toRem(56);
 
   @include respond-to(small) {
-    padding-left: toRem(16);
+    padding-left: toRem(36);
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
@@ -786,7 +806,7 @@
       padding-left: toRem(56);
 
       @include respond-to(small) {
-        padding-left: toRem(20);
+        padding-left: toRem(36);
       }
 
       > li {
@@ -817,13 +837,14 @@
   margin-top: toRem(32);
   width: 100%;
   table-layout: fixed;
-  background: url('/backgrounds/block-bg.svg') no-repeat;
+  background: url('/backgrounds/table-bg.svg') no-repeat;
   background-size: 100% 100%;
   padding: toRem(16) toRem(16) toRem(26) toRem(26);
   border-collapse: separate;
 
   @include respond-to(small) {
     table-layout: initial;
+    padding: toRem(16) toRem(5) toRem(26) toRem(10);
   }
 
   th,
@@ -832,7 +853,7 @@
     color: var(--text-primary-main);
 
     @include respond-to(small) {
-      padding: toRem(5);
+      padding: toRem(3);
     }
   }
 
@@ -863,7 +884,7 @@
 
 .privacy-policy__content {
   display: grid;
-  grid-template-columns: minmax(toRem(200), toRem(891)) minmax(toRem(300), 1fr);
+  grid-template-columns: minmax(toRem(200), toRem(891)) toRem(429);
   gap: toRem(20);
 
   @include respond-to(xmedium) {
@@ -880,11 +901,7 @@
   flex-direction: column;
   position: sticky;
   top: toRem(100);
-  padding: toRem(24) toRem(16) toRem(34) toRem(76);
-
-  @include respond-to(small) {
-    padding-left: toRem(50);
-  }
+  padding: toRem(24) toRem(16) toRem(38) toRem(86);
 
   /* stylelint-disable no-descending-specificity */
   > li {
@@ -901,14 +918,21 @@
     width: toRem(48);
     left: toRem(-56);
     text-align: right;
+    font-size: toRem(20);
   }
   /* stylelint-enable no-descending-specificity */
 
   @include respond-to(xmedium) {
-    grid-row-start: 1;
-    max-width: toRem(429);
-    position: relative;
-    top: 0;
+    display: none;
+  }
+}
+
+.privacy-policy__anchor {
+  font-size: toRem(20);
+  transition: 0.3s color;
+
+  &:hover {
+    color: var(--text-primary-dark);
   }
 }
 </style>

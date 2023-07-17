@@ -9,7 +9,7 @@ export const config = {
   BUILD_VERSION: packageJson.version || import.meta.env.VITE_APP_BUILD_VERSION,
   DASHBOARD_APP_URL: '',
   GITHUB_URL: '',
-  FAUCET_APP_URL: '',
+  PUSH_NOTIFICATIONS_URL: 'https://app.push.org/channels',
 } as const
 
 Object.assign(config, _mapEnvCfg(import.meta.env))

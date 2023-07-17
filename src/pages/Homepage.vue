@@ -113,9 +113,11 @@
           </p>
           <app-button
             class="homepage__launch-btn"
-            :text="$t('homepage.faucet-btn')"
-            scheme="primary"
-            :href="$config.FAUCET_APP_URL"
+            scheme="secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            :text="$t('homepage.fourth-block-btn')"
+            :href="$config.PUSH_NOTIFICATIONS_URL"
           />
         </div>
       </div>

@@ -21,20 +21,6 @@
               >
                 {{ $t('app-navigation-mobile.homepage-link') }}
               </router-link>
-              <router-link
-                class="app-navigation-mobile__link"
-                :to="{ name: $routes.terms }"
-                @click="closeNav"
-              >
-                {{ $t('app-navigation-mobile.terms-link') }}
-              </router-link>
-              <router-link
-                class="app-navigation-mobile__link"
-                :to="{ name: $routes.privacyPolicy }"
-                @click="closeNav"
-              >
-                {{ $t('app-navigation-mobile.privacy-policy-link') }}
-              </router-link>
             </div>
             <div class="app-navigation-mobile__actions">
               <app-button
